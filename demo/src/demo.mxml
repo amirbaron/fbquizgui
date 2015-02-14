@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx" width="470" height="440">
+	
+	<s:layout>
+		<s:BasicLayout />
+	</s:layout>
+	<fx:Style source="demo.css"/>
+	<mx:ViewStack id="viewstack1" x="-1" y="34" width="471" height="322">
+		<s:NavigatorContent width="100%" height="100%" label="View 1">
+			<s:Image x="0" y="4" width="471" height="192" source="@Embed('../resources/brasil_land.jpg')"/>
+			<s:Label x="0" y="160" width="472" height="31" backgroundAlpha="0.76"
+					 backgroundColor="#2550CB" color="#FBF7F7" fontFamily="Verdana"
+					 fontSize="16" fontStyle="italic" paddingLeft="15"
+					 text="The land of Samba and Football.. " verticalAlign="middle"/>
+			
+			<s:Button x="358" y="206" width="90" height="105" label="Canada" chromeColor="#FFFFFF"
+					  cornerRadius="5" focusColor="#FFFFFF" icon="@Embed('../resources/Canada_flag.JPG')"
+					  iconPlacement="bottom"/>
+
+
+			<s:Button x="246" y="206" width="90" height="105" label="Italy" chromeColor="#FFFFFF"
+					  cornerRadius="5" focusColor="#FFFFFF" icon="@Embed('../resources/italy_flag.jpg')"
+					  iconPlacement="bottom"/>
+
+			<s:Button x="134" y="206" width="90" height="105" label="Brazil" chromeColor="#FFFFFF"
+					  cornerRadius="5" focusColor="#FFFFFF" icon="@Embed('../resources/brasil_flag.jpg')"
+					  iconPlacement="bottom"/>
+
+			<s:Button x="22" y="206" width="90" height="105" label="England" chromeColor="#FFFFFF"
+					  cornerRadius="5" focusColor="#FFFFFF" icon="@Embed('../resources/england_flag.jpg')"
+					  iconPlacement="bottom"/>
+		</s:NavigatorContent>
+	</mx:ViewStack>
+	<s:SkinnableContainer x="0" y="365" width="472" height="30" backgroundAlpha="0.76"
+			 backgroundColor="#2550CB" color="#FAF7F7" fontFamily="Arial" fontSize="22"
+			 fontWeight="bold" textAlign="center" >
+	
+		<s:Button x="10" y="4" width="25" height="23" label="1" chromeColor="#FCFCFD" color="#000000"
+				  cornerRadius="20" fontSize="7"/>
+		<s:Button x="38" y="4" width="25" height="23" label="2" chromeColor="#FCFCFD" color="#000000"
+				  cornerRadius="20" fontSize="7"/>
+		<s:Button x="65" y="4" width="25" height="23" label="3" chromeColor="#FCFCFD" color="#000000"
+				  cornerRadius="20" fontSize="7"/>
+		<s:Button x="92" y="4" width="25" height="23" label="4" chromeColor="#FCFCFD" color="#000000"
+				  cornerRadius="20" fontSize="7"/>
+		<s:Button x="119" y="4" width="25" height="23" label="5" chromeColor="#FCFCFD"
+				  color="#000000" cornerRadius="20" fontSize="7"/>
+	</s:SkinnableContainer>	
+	<s:SkinnableContainer x="0" y="0" width="470" height="35" backgroundColor="#3B5998">
+		<s:Label x="68" y="9" color="#FFFFFF" fontFamily="Arial" fontSize="22" fontWeight="bold"
+				 text="How well do you know the world?"/>
+	</s:SkinnableContainer>
+		<s:SkinnableContainer x="0" y="396" width="470" height="45" backgroundColor="#3B5998">
+			<s:Image x="186" y="5" width="114" source="@Embed('../resources/stars.jpg')"/>
+			<s:Image x="0" y="0" width="40" height="45" source="@Embed('../resources/mypic.jpg')"/>
+			<s:Label x="48" y="10" width="146" height="25" color="#FEFCFC"
+					 text="Created by Alon Kiriati" verticalAlign="middle"/>
+			<s:Image x="378" y="0" width="90" height="46" source="@Embed('../resources/logo_3.jpg')"/>
+		</s:SkinnableContainer>
+	<s:SkinnableContainer x="0" y="0" width="2" height="400" backgroundColor="#3B5998">
+	</s:SkinnableContainer>
+	<s:SkinnableContainer x="468" y="0" width="2" height="400" backgroundColor="#3B5998"
+						  contentBackgroundColor="#3B5998">
+	</s:SkinnableContainer>
+	
+</s:Application>
