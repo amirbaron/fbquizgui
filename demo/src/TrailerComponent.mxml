@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:SkinnableContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					  xmlns:s="library://ns.adobe.com/flex/spark" 
+					  xmlns:mx="library://ns.adobe.com/flex/mx"
+					  x="0" y="396" width="470" height="45" backgroundColor="#3B5998">
+	<s:Image x="186" y="5" width="114" source="@Embed('../resources/stars.jpg')"/>
+	<s:Image x="0" y="0" width="40" height="45" source="@Embed('../resources/mypic.jpg')"/>
+	<s:Label x="48" y="10" width="146" height="25" color="#FEFCFC"
+			 text="Created by Alon Kiriati" verticalAlign="middle"/>
+	<s:Image x="378" y="0" width="90" height="46" source="@Embed('../resources/logo_3.jpg')"/>
+</s:SkinnableContainer>
