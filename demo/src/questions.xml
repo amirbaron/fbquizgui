@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://blog.flexexamples.com/2007/10/03/displaying-images-from-an-xml-file-using-the-repeater-component/ -->
+<questions>
+	<question1>
+		<question label="The land of Samba and Football.." icon="@Embed('../resources/brasil_land.jpg')"/>
+	    <answer label="Canda" icon="@Embed('../resources/canada_flag.jpg')" />
+	    <answer label="Italy" icon="@Embed('../resources/italy_flag.jpg')"/>
+	    <answer label="Brazil" icon="@Embed('../resources/brasil_flag.jpg')"/>
+	    <answer label="England" icon="@Embed('../resources/england_flag.jpg')"/>
+    </question1>
+    <question2>
+    	<question label="The land of Samba and Football..2" icon="@Embed('../resources/brasil_land.jpg')"/>
+	    <answer label="Canda2" icon="@Embed('../resources/canada_flag.jpg')" />
+	    <answer label="Italy2" icon="@Embed('../resources/italy_flag.jpg')"/>
+	    <answer label="Brazil2" icon="@Embed('../resources/brasil_flag.jpg')"/>
+	    <answer label="England2" icon="@Embed('../resources/england_flag.jpg')"/>
+    </question2>
+    
+</questions>

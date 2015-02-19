@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:ItemRenderer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:s="library://ns.adobe.com/flex/spark">
+	<s:Button x="{data.@x}" y="{data.@y}" width="90" height="105" label="{data.@text}" chromeColor="#FFFFFF"
+			  cornerRadius="5" focusColor="#FFFFFF" icon="@Embed('../resources/Canada_flag.JPG')"
+			  iconPlacement="bottom"/>
+</s:ItemRenderer>

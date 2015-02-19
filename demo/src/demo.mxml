@@ -13,18 +13,50 @@
 	<fx:Script>
 		<![CDATA[
 			
-			public function addSlides():void {
+	//		public function addSlides():void {
+	//			
+	//			var slide:SlideComponent = new SlideComponent();
+	//			
+	//			this["viewstack1"].addElement(slide);
+	//		}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Script>
+		<![CDATA[
+			
+			public function moveToSlide(num:int):void {
 				
-				var slide:SlideComponent = new SlideComponent();
-				this["viewstack1"].addElement(slide);
+				viewstack1.selectedIndex=num;
 			}
 			
 		]]>
 	</fx:Script>
-
-	<mx:ViewStack id="viewstack1" x="0" y="34" width="471" height="322" initialize="addSlides();">
+	<!--initialize="addSlides();"-->
+	<mx:ViewStack id="viewstack1" name="viewstack1" x="0" y="34" width="471" height="322" >
+		<local:SlideComponent/>
+		<local:SlideComponent2/>
 	</mx:ViewStack>
-	<local:SlidesChooserComponent id="chooser"/>
+	<s:SkinnableContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
+						  xmlns:s="library://ns.adobe.com/flex/spark" 
+						  xmlns:mx="library://ns.adobe.com/flex/mx"
+						  x="0" y="365" width="472" height="30" backgroundAlpha="0.76"
+						  backgroundColor="#2550CB" color="#FAF7F7" fontFamily="Arial" fontSize="22"
+						  fontWeight="bold" textAlign="center" >
+		
+		
+		<s:Button x="10" y="4" width="25" height="23" label="1" chromeColor="#FCFCFD" color="#000000"
+				  cornerRadius="20" fontSize="7" click="this.moveToSlide(0)"/>
+		<s:Button x="38" y="4" width="25" height="23" label="2" chromeColor="#FCFCFD" color="#000000"
+				  cornerRadius="20" fontSize="7" click="this.moveToSlide(1)" />
+		<s:Button x="65" y="4" width="25" height="23" label="3" chromeColor="#FCFCFD" color="#000000"
+				  cornerRadius="20" fontSize="7"/>
+		<s:Button x="92" y="4" width="25" height="23" label="4" chromeColor="#FCFCFD" color="#000000"
+				  cornerRadius="20" fontSize="7"/>
+		<s:Button x="119" y="4" width="25" height="23" label="5" chromeColor="#FCFCFD"
+				  color="#000000" cornerRadius="20" fontSize="7"/>
+	</s:SkinnableContainer>	
 	<s:SkinnableContainer x="468" y="0" width="2" height="400" backgroundColor="#3B5998"
 						  contentBackgroundColor="#3B5998">
 	</s:SkinnableContainer>
