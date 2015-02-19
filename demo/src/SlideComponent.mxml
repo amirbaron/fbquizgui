@@ -2,18 +2,21 @@
 	<s:NavigatorContent xmlns:fx="http://ns.adobe.com/mxml/2009" 
 						xmlns:s="library://ns.adobe.com/flex/spark" 
 						xmlns:mx="library://ns.adobe.com/flex/mx" width="472" height="337" label="View 1" showEffect="fade" hideEffect="fade">
-		<s:Image x="0" y="4" width="471" height="192" source="@Embed('../resources/brasil_land.jpg')"/>
-		<s:Label x="0" y="160" width="472" height="31" backgroundAlpha="0.76"
-				 backgroundColor="#2550CB" color="#FBF7F7" fontFamily="Verdana"
-				 fontSize="16" fontStyle="italic" paddingLeft="15"
-				 text="The land of Samba and Football.. " verticalAlign="middle"/>
-
+		
 		<fx:Declarations>
 			<fx:Model id="questionsXml" source="questions.xml"/>
 			
-		<!--	<mx:XMLListCollection id="myXC"
-								  source="{questionsXml}"/>-->
+			<!--	<mx:XMLListCollection id="myXC"
+			source="{questionsXml}"/>-->
 		</fx:Declarations>
+		
+		<s:Image x="0" y="4" width="471" height="192" source="{questionsXml.question1.question.icon}"/>
+		<s:Label x="0" y="160" width="472" height="31" backgroundAlpha="0.76"
+				 backgroundColor="#2550CB" color="#FBF7F7" fontFamily="Verdana"
+				 fontSize="16" fontStyle="italic" paddingLeft="15"
+				 text="{questionsXml.question1.question.label}" verticalAlign="middle"/>
+
+
 		
 		<mx:HBox x="40" y="210">
 <!--		<mx:Repeater id="myrep" dataProvider="{myXC}">
