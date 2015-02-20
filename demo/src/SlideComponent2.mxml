@@ -15,19 +15,19 @@
 			 backgroundColor="#2550CB" color="#FBF7F7" fontFamily="Verdana"
 			 fontSize="16" fontStyle="italic" paddingLeft="15"
 			 text="{questionsXml.slide2.question.label}" verticalAlign="middle"/>
+	
+	<mx:HBox x="40" y="210">
+		<!--		<mx:Repeater id="myrep" dataProvider="{myXC}">
 		
-		<mx:HBox x="40" y="210">
-<!--		<mx:Repeater id="myrep" dataProvider="{myXC}">
-			
 		<s:Button x="{myrep.currentItem.x}" y="206" width="90" height="105" label="Canada" chromeColor="#FFFFFF"
-				  cornerRadius="5" focusColor="#FFFFFF" icon="@Embed('../resources/Canada_flag.JPG')"
-				  iconPlacement="bottom"/>
-	-->	
-
+		cornerRadius="5" focusColor="#FFFFFF" icon="@Embed('../resources/Canada_flag.JPG')"
+		iconPlacement="bottom"/>
+		-->	
+		
 		<s:Button width="90" height="105" label="{questionsXml.slide2.asnwers.answer[0].label}" chromeColor="#FFFFFF"
 				  cornerRadius="5" focusColor="#FFFFFF" icon="{questionsXml.slide2.asnwers.answer[0].icon}"
 				  iconPlacement="bottom"/>
-			
+		
 		<s:Button width="90" height="105" label="{questionsXml.slide2.asnwers.answer[1].label}" chromeColor="#FFFFFF"
 				  cornerRadius="5" focusColor="#FFFFFF" icon="{questionsXml.slide2.asnwers.answer[1].icon}"
 				  iconPlacement="bottom"/>
@@ -39,7 +39,6 @@
 		<s:Button width="90" height="105" label="{questionsXml.slide2.asnwers.answer[3].label}" chromeColor="#FFFFFF"
 				  cornerRadius="5" focusColor="#FFFFFF" icon="{questionsXml.slide2.asnwers.answer[3].icon}"
 				  iconPlacement="bottom"/>
-	<!--	</mx:Repeater> -->	
-			</mx:HBox>
-	</s:NavigatorContent>
-
+		<!--	</mx:Repeater> -->	
+	</mx:HBox>
+</s:NavigatorContent>
