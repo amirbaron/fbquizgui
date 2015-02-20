@@ -2,7 +2,26 @@
 	<s:NavigatorContent xmlns:fx="http://ns.adobe.com/mxml/2009" 
 						xmlns:s="library://ns.adobe.com/flex/spark" 
 						xmlns:mx="library://ns.adobe.com/flex/mx" width="472" height="337" label="View 1" showEffect="fade" hideEffect="fade">
-		<s:Image x="0" y="4" width="471" height="192" source="@Embed('../resources/brasil_land.jpg')"/>
+		
+		<fx:Script>
+			<![CDATA[
+				import flash.events.Event;
+				import illumifi.Parse;
+				protected function image1_addedToStageHandler(event:Event):void
+				{
+					trace("id: " + Aain.quizId);
+					event.target.source="../resources/Canada_flag.JPG";
+					Parse.CloudCode("hello",{},
+						function(resp){ 
+							trace (resp.result)
+						},null);
+				}
+				
+			]]>
+		</fx:Script>
+		
+		<s:Image x="0" y="4" width="471" height="192"  addedToStage="image1_addedToStageHandler(event)"/>
+		
 		<s:Label x="0" y="160" width="472" height="31" backgroundAlpha="0.76"
 				 backgroundColor="#2550CB" color="#FBF7F7" fontFamily="Verdana"
 				 fontSize="16" fontStyle="italic" paddingLeft="15"
