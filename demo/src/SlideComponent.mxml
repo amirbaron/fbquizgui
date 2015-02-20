@@ -4,17 +4,40 @@
 						xmlns:mx="library://ns.adobe.com/flex/mx" width="472" height="337" label="View 1" showEffect="fade" hideEffect="fade">
 		
 		<fx:Declarations>
-			<fx:Model id="questionsXml" source="questions.xml"/>
+			<fx:Model id="slidesXml" source="slides.xml"/>
 			
 			<!--	<mx:XMLListCollection id="myXC"
-			source="{questionsXml}"/>-->
+			source="{slidesXml}"/>-->
 		</fx:Declarations>
 		
-		<s:Image x="0" y="4" width="471" height="192" source="{questionsXml.question1.question.icon}"/>
+		<fx:Script>
+			<![CDATA[
+				
+				public function buttonClicked(event:MouseEvent):void 
+				{
+					/*for each (var answer:Xml in slidesXml.slide1.answers.id)
+					{
+						if (answer.@id == "q1a1")
+						{
+							//do something
+						}
+					}
+					*/
+					/*var selectedNodes:XML = slidesXml.slide1.answers.answer[@uid=="q1a1"];
+					var selectedNode:XMLNode = selectedNodes[0];*/
+						
+					//if (selectedNode.attributes.score=="1")
+						return;
+				}
+				
+			]]>
+		</fx:Script>
+		
+		<s:Image x="0" y="4" width="471" height="192" source="{slidesXml.slide1.question.icon}"/>
 		<s:Label x="0" y="160" width="472" height="31" backgroundAlpha="0.76"
 				 backgroundColor="#2550CB" color="#FBF7F7" fontFamily="Verdana"
 				 fontSize="16" fontStyle="italic" paddingLeft="15"
-				 text="{questionsXml.question1.question.label}" verticalAlign="middle"/>
+				 text="{slidesXml.slide1.question.label}" verticalAlign="middle"/>
 
 
 		
@@ -26,21 +49,21 @@
 				  iconPlacement="bottom"/>
 	-->	
 
-		<s:Button width="90" height="105" label="{questionsXml.question1.answer[0].label}" chromeColor="#FFFFFF"
-				  cornerRadius="5" focusColor="#FFFFFF" icon="{questionsXml.question1.answer[0].icon}"
-				  iconPlacement="bottom"/>
+		<s:Button width="90" height="105" id="q1a1" label="{slidesXml.slide1.answers.answer[0].label}" chromeColor="#FFFFFF"
+				  cornerRadius="5" focusColor="#FFFFFF" icon="{slidesXml.slide1.answers.answer[0].icon}"
+				  iconPlacement="bottom" click="buttonClicked(event);"/>
 			
-		<s:Button width="90" height="105" label="{questionsXml.question1.answer[1].label}" chromeColor="#FFFFFF"
-				  cornerRadius="5" focusColor="#FFFFFF" icon="{questionsXml.question1.answer[1].icon}"
-				  iconPlacement="bottom"/>
+		<s:Button width="90" height="105" label="{slidesXml.slide1.answers.answer[1].label}" chromeColor="#FFFFFF"
+				  cornerRadius="5" focusColor="#FFFFFF" icon="{slidesXml.slide1.answers.answer[1].icon}"
+				  iconPlacement="bottom" click="this.enabled=false"/>
 		
-		<s:Button width="90" height="105" label="{questionsXml.question1.answer[2].label}" chromeColor="#FFFFFF"
-				  cornerRadius="5" focusColor="#FFFFFF" icon="{questionsXml.question1.answer[2].icon}"
-				  iconPlacement="bottom"/>
+		<s:Button width="90" height="105" label="{slidesXml.slide1.answers.answer[2].label}" chromeColor="#FFFFFF"
+				  cornerRadius="5" focusColor="#FFFFFF" icon="{slidesXml.slide1.answers.answer[2].icon}"
+				  iconPlacement="bottom" click="this.enabled=false"/>
 		
-		<s:Button width="90" height="105" label="{questionsXml.question1.answer[3].label}" chromeColor="#FFFFFF"
-				  cornerRadius="5" focusColor="#FFFFFF" icon="{questionsXml.question1.answer[3].icon}"
-				  iconPlacement="bottom"/>
+		<s:Button width="90" height="105" label="{slidesXml.slide1.answers.answer[3].label}" chromeColor="#FFFFFF"
+				  cornerRadius="5" focusColor="#FFFFFF" icon="{slidesXml.slide1.answers.answer[3].icon}"
+				  iconPlacement="bottom" click="this.enabled=false"/>
 	<!--	</mx:Repeater> -->	
 			</mx:HBox>
 	</s:NavigatorContent>
