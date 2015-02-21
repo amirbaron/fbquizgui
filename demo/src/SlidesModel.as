@@ -8,7 +8,7 @@ package
 	{
 		private var jsonObject:Object;
 		private var CONFIG_URL:String = "demo.json";
-		private var currentSlide:int;
+		public var currentSlide:int;
 		
 		public function SlidesModel(){
 			loadConfigFromUrl();

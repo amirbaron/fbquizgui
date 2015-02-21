@@ -17,6 +17,7 @@
 				
 				public function buttonClicked(event:MouseEvent):void 
 				{
+					slides.currentSlide++;
 					/*for each (var answer:Xml in slidesXml.slide1.answers.id)
 					{
 						if (answer.@id == "q1a1")
@@ -55,15 +56,15 @@
 				  cornerRadius="5" focusColor="#FFFFFF" icon="{slides.getImgForEntityAtIndex(0)}"
 				  iconPlacement="bottom" click="buttonClicked(event);"/>
 			
-		<s:Button width="90" height="105" label="{slides.getTitleForEntityAtIndex(0)}" chromeColor="#FFFFFF"
+		<s:Button width="90" height="105" label="{slides.getTitleForEntityAtIndex(1)}" chromeColor="#FFFFFF"
 				  cornerRadius="5" focusColor="#FFFFFF" icon="{slides.getImgForEntityAtIndex(1)}"
 				  iconPlacement="bottom" click="this.enabled=false"/>
 		
-		<s:Button width="90" height="105" label="{slides.getTitleForEntityAtIndex(0)}" chromeColor="#FFFFFF"
+		<s:Button width="90" height="105" label="{slides.getTitleForEntityAtIndex(2)}" chromeColor="#FFFFFF"
 				  cornerRadius="5" focusColor="#FFFFFF" icon="{slides.getImgForEntityAtIndex(2)}"
 				  iconPlacement="bottom" click="this.enabled=false"/>
 		
-		<s:Button width="90" height="105" label="{slides.getTitleForEntityAtIndex(0)}" chromeColor="#FFFFFF"
+		<s:Button width="90" height="105" label="{slides.getTitleForEntityAtIndex(3)}" chromeColor="#FFFFFF"
 				  cornerRadius="5" focusColor="#FFFFFF" icon="{slides.getImgForEntityAtIndex(3)}"
 				  iconPlacement="bottom" click="this.enabled=false"/>
 	<!--	</mx:Repeater> -->	
