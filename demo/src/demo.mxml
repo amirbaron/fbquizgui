@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
 			   xmlns:s="library://ns.adobe.com/flex/spark"
-			   xmlns:mx="library://ns.adobe.com/flex/mx" width="470" height="440" xmlns:local="*">
+			   xmlns:mx="library://ns.adobe.com/flex/mx" width="470" height="440" xmlns:local="*" preinitialize="preInit();">
+	
+	<fx:Metadata>
+		[Event(name="jsonLoaded", type="flash.events.Event")]
+	</fx:Metadata>
 	
 	<s:layout>
 		<s:BasicLayout />
@@ -12,30 +18,31 @@
 
 	<fx:Script>
 		<![CDATA[
-			
+			import mx.managers.CursorManager;
+
+			private var model:SlidesModel = null;
+			private function onJsonLoaded():void{
+				trace("On json loaded");
+				CursorManager.removeBusyCursor();
+			}
+			public function preInit():void{
+				CursorManager.setBusyCursor();
+				model = SlidesModel.getInstance();
+				CursorManager.removeBusyCursor();
+			}
 			public function addSlides():void {
-				
 				var slide:SlideComponent = new SlideComponent();
 				slide.id = "slide1";
-				
-				var slide2:SlideComponent = new SlideComponent();
-				slide2.id = "slide2";
-				
 				viewstack1.addElement(slide);
-				viewstack1.addElement(slide2);
 			}
-			
 		]]>
 	</fx:Script>
 	
 	<fx:Script>
 		<![CDATA[
-			
 			public function moveToSlide(num:int):void {
-				
-				viewstack1.selectedIndex=num;
+				model.currentSlide=num;
 			}
-			
 		]]>
 	</fx:Script>
 	<!--initialize="addSlides();"-->

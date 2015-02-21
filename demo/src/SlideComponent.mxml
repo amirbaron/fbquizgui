@@ -4,17 +4,12 @@
 						xmlns:mx="library://ns.adobe.com/flex/mx" width="472" height="337" label="View 1" showEffect="fade" hideEffect="fade">
 		
 		<fx:Declarations>
-			<fx:Model id="slidesXml" source="slides.xml"/>
-			
-			<!--	<mx:XMLListCollection id="myXC"
-			source="{slidesXml}"/>-->
-			<local:SlidesModel id="slides" xmlns:local="*"/>
-
+			<!--<local:SlidesModel id="slides" xmlns:local="*" />-->
 		</fx:Declarations>
 		
 		<fx:Script>
 			<![CDATA[
-				
+				private var slides:SlidesModel = SlidesModel.getInstance();
 				public function buttonClicked(event:MouseEvent):void 
 				{
 					trace("Pressed on button with uid:" + event.target.uid);

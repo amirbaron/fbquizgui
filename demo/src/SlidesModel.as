@@ -6,17 +6,44 @@ package
 	[Bindable] 
 	public class SlidesModel
 	{
+		private static var instance:SlidesModel = new SlidesModel();
 		private var jsonObject:Object;
 		private var CONFIG_URL:String = "demo.json";
 		public var currentSlide:int;
 		
+		[Bindable]
+		public var createdByImage:String;
+		
+		public static function getInstance():SlidesModel
+		{
+			return instance;
+		}
+		
 		public function SlidesModel(){
+			if(instance)
+			{
+				throw new Error ("We cannot create a new instance. Please use Singleton.getInstance()");
+			}
+			
 			loadConfigFromUrl();
 			currentSlide =0;
 		}
-		
+		[Bindable]
 		private function getCurrentSlideJsonObj():Object{
 			return jsonObject.slides[getCurrentSlide()];
+		}
+		
+		private function getCreatedByJsonObject():Object{
+			return jsonObject.createdBy;
+		}
+		
+		[Bindable]
+		public function getCreatedByImg():String{
+			return createdByImage;
+		}
+		
+		private function setCreatedByImg(createdByImg:String):void{
+			this.createdByImage=createdByImg;
 		}
 		
 		[Bindable]
@@ -29,10 +56,21 @@ package
 			return getCurrentSlideJsonObj().imgSmall;
 		}
 		
+		[Bindable]
+		public function getLogoImage():String{
+			return jsonObject.logoImg;
+		}
+		[Bindable]
+		public function getCreatedByRatingImg():String{
+			return getCreatedByJsonObject().ratingImg;
+		}
+		
 		public function getTSlideText():String{
 			return getCurrentSlideJsonObj().text;
 		}
-		
+		public function getNumberOfSlides():int{
+			return jsonObject.slides.length;
+		}
 		public function getNumberOfEntitiesInSlide():int{
 			return getCurrentSlideJsonObj().entities.length;
 		}
@@ -49,7 +87,7 @@ package
 			return getEntityAtIndex(index).title;
 		}
 		
-		
+		[Bindable]
 		private function getCurrentSlide():int{
 			return currentSlide;
 		}
@@ -70,10 +108,11 @@ package
 		
 		private  function completeHandler(event:Event):void {
 			var loader:URLLoader = URLLoader(event.target);
-			trace("completeHandler: " + loader.data);
+			//			trace("completeHandler: " + loader.data);
 			
 			jsonObject= JSON.parse(loader.data);
-			trace("Read :" + jsonObject);
+			setCreatedByImg(getCreatedByJsonObject().imgSmall);
+			//			trace("Read :" + jsonObject);
 		}
 		
 		

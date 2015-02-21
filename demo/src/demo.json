@@ -2,11 +2,13 @@
   "name": "demo",
   "type": "quiz",
   "title": "How well do you know the world?",
+  "logoImg": "https://res.cloudinary.com/quiz/image/upload/v1424464774/logo_3_smnisd.jpg",
   "createdBy": {
     "firstName": "Alon",
     "lastName": "Kiriati",
-    "imgSmall": "https://res.cloudinary.com/quiz/image/upload/v1424464773/brasil_land_yovuyc.jpg",
-    "rating": 4.5
+    "imgSmall": "https://res.cloudinary.com/quiz/image/upload/v1424464775/mypic_andsm3.jpg",
+    "rating": 4.5,
+    "ratingImg": "https://res.cloudinary.com/quiz/image/upload/v1424464776/stars_qwjlgf.jpg"
   },
   "slides": [
     {
