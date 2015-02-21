@@ -18,6 +18,7 @@ package
 		private function getCurrentSlideJsonObj():Object{
 			return jsonObject.slides[getCurrentSlide()];
 		}
+		[Bindable]
 		public function getSlideImage():String{
 			return getCurrentSlideJsonObj().imgSmall;
 		}
@@ -33,10 +34,11 @@ package
 		private function getEntityAtIndex(index:int):Object{
 			return getCurrentSlideJsonObj().entities[index];
 		}
+		[Bindable]
 		public function getImgForEntityAtIndex(index:int):String {
 			return getEntityAtIndex(index).imgSmall;
 		}
-		
+		[Bindable]
 		public function getTitleForEntityAtIndex(index:int):String {
 			return getEntityAtIndex(index).title;
 		}
