@@ -51,20 +51,20 @@
 				  iconPlacement="bottom"/>
 	-->	
 
-		<s:Button width="90" height="105" id="q1a1" label="{slidesXml.slide1.answers.answer[0].label}" chromeColor="#FFFFFF"
-				  cornerRadius="5" focusColor="#FFFFFF" icon="{slidesXml.slide1.answers.answer[0].icon}"
+		<s:Button width="90" height="105" id="q1a1" label="{slides.getTitleForEntityAtIndex(0)}" chromeColor="#FFFFFF"
+				  cornerRadius="5" focusColor="#FFFFFF" icon="{slides.getImgForEntityAtIndex(0)}"
 				  iconPlacement="bottom" click="buttonClicked(event);"/>
 			
-		<s:Button width="90" height="105" label="{slidesXml.slide1.answers.answer[1].label}" chromeColor="#FFFFFF"
-				  cornerRadius="5" focusColor="#FFFFFF" icon="{slidesXml.slide1.answers.answer[1].icon}"
+		<s:Button width="90" height="105" label="{slides.getTitleForEntityAtIndex(0)}" chromeColor="#FFFFFF"
+				  cornerRadius="5" focusColor="#FFFFFF" icon="{slides.getImgForEntityAtIndex(1)}"
 				  iconPlacement="bottom" click="this.enabled=false"/>
 		
-		<s:Button width="90" height="105" label="{slidesXml.slide1.answers.answer[2].label}" chromeColor="#FFFFFF"
-				  cornerRadius="5" focusColor="#FFFFFF" icon="{slidesXml.slide1.answers.answer[2].icon}"
+		<s:Button width="90" height="105" label="{slides.getTitleForEntityAtIndex(0)}" chromeColor="#FFFFFF"
+				  cornerRadius="5" focusColor="#FFFFFF" icon="{slides.getImgForEntityAtIndex(2)}"
 				  iconPlacement="bottom" click="this.enabled=false"/>
 		
-		<s:Button width="90" height="105" label="{slidesXml.slide1.answers.answer[3].label}" chromeColor="#FFFFFF"
-				  cornerRadius="5" focusColor="#FFFFFF" icon="{slidesXml.slide1.answers.answer[3].icon}"
+		<s:Button width="90" height="105" label="{slides.getTitleForEntityAtIndex(0)}" chromeColor="#FFFFFF"
+				  cornerRadius="5" focusColor="#FFFFFF" icon="{slides.getImgForEntityAtIndex(3)}"
 				  iconPlacement="bottom" click="this.enabled=false"/>
 	<!--	</mx:Repeater> -->	
 			</mx:HBox>

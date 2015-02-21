@@ -15,12 +15,30 @@ package
 			currentSlide =0;
 		}
 		
+		private function getCurrentSlideJsonObj():Object{
+			return jsonObject.slides[getCurrentSlide()];
+		}
 		public function getSlideImage():String{
-			return jsonObject.slides[getCurrentSlide()].imgSmall;
+			return getCurrentSlideJsonObj().imgSmall;
 		}
 		
 		public function getTSlideText():String{
-			return jsonObject.slides[getCurrentSlide()].text;
+			return getCurrentSlideJsonObj().text;
+		}
+		
+		public function getNumberOfEntitiesInSlide():int{
+			return getCurrentSlideJsonObj().entities.length;
+		}
+		
+		private function getEntityAtIndex(index:int):Object{
+			return getCurrentSlideJsonObj().entities[index];
+		}
+		public function getImgForEntityAtIndex(index:int):String {
+			return getEntityAtIndex(index).imgSmall;
+		}
+		
+		public function getTitleForEntityAtIndex(index:int):String {
+			return getEntityAtIndex(index).title;
 		}
 		
 		
