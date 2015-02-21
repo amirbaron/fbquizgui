@@ -18,6 +18,12 @@ package
 		private function getCurrentSlideJsonObj():Object{
 			return jsonObject.slides[getCurrentSlide()];
 		}
+		
+		[Bindable]
+		public function getPointsForIndex(index:int):int{
+			return getEntityAtIndex(index).points;
+		}
+		
 		[Bindable]
 		public function getSlideImage():String{
 			return getCurrentSlideJsonObj().imgSmall;

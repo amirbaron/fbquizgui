@@ -17,9 +17,15 @@
 				
 				public function buttonClicked(event:MouseEvent):void 
 				{
-					slides.currentSlide++;
-					
-						return;
+					trace("Pressed on button with uid:" + event.target.uid);
+					if(slides.getPointsForIndex(event.target.uid)){
+						trace("Correct!, moving to next slide");
+						slides.currentSlide++;	
+					}
+					else{
+						trace("Stupid!");
+					}
+					return;
 				}
 				
 			]]>
