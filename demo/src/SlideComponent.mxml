@@ -6,58 +6,78 @@
 		<fx:Declarations>
 			<!--<local:SlidesModel id="slides" xmlns:local="*" />-->
 		</fx:Declarations>
+	
 		
 		<fx:Script>
 			<![CDATA[
-				private var slides:SlidesModel = SlidesModel.getInstance();
+				private var model:DataModel = DataModel.getInstance();
 				public function buttonClicked(event:MouseEvent):void 
 				{
 					trace("Pressed on button with uid:" + event.target.uid);
-					if(slides.getPointsForIndex(event.target.uid)){
-						trace("Correct!, moving to next slide");
-						slides.currentSlide++;	
+					if(model.activity.slides[model.activity.currentSlide].entities[event.target.uid].points > 0)
+					{
+						model.activity.slides[model.activity.currentSlide].entities[event.target.uid].chromeColor = 13434726;
+						model.activity.slides[model.activity.currentSlide].chooserChromeColor = 13434777;
+						model.activity.slides[model.activity.currentSlide].points += model.activity.slides[model.activity.currentSlide].entities[event.target.uid].points;
 					}
-					else{
-						trace("Stupid!");
+					else
+					{
+						model.activity.slides[model.activity.currentSlide].entities[event.target.uid].chromeColor = 16711680;
+						model.activity.slides[model.activity.currentSlide].chooserChromeColor = 16737894;
+						for (var i:int = 0; i < model.activity.slides[model.activity.currentSlide].entities.length; i++)
+						{
+							var entity:Entity = model.activity.slides[model.activity.currentSlide].entities[i];
+							if (entity.points > 0)
+							{
+								entity.chromeColor = 13056;
+							}
+						}
 					}
+					
+					for (var i:int = 0; i < model.activity.slides[model.activity.currentSlide].entities.length; i++)
+					{
+						model.activity.slides[model.activity.currentSlide].entities[i].enabled = false;
+					}
+					
+					sleep(100, moveSlide, [] );
+					
 					return;
+					
+				}
+				
+				function sleep(counter: int, subsequentFunction: Function, args: Array): void
+				{
+					if (counter > 0)
+						callLater(sleep, [counter - 1, subsequentFunction, args]);
+					else
+						callLater(subsequentFunction, args);
+				}
+				
+				function moveSlide()
+				{
+					model.activity.currentSlide++;;
 				}
 				
 			]]>
 		</fx:Script>
 		
-		<s:Image x="0" y="4" width="471" height="192" source="{slides.getSlideImage()}"/>
+		<s:Image x="0" y="4" width="471" height="192" source="{model.activity.slides[model.activity.currentSlide].imgSmall}"/>
 		<s:Label x="0" y="160" width="472" height="31" backgroundAlpha="0.76"
-				 backgroundColor="#2550CB" color="#FBF7F7" fontFamily="Verdana"
+				 backgroundColor="#2550CB"  color="#FBF7F7" fontFamily="Verdana"
 				 fontSize="16" fontStyle="italic" paddingLeft="15"
-				 text="{slides.getTSlideText()}" verticalAlign="middle"/>
+				 text="{model.activity.slides[model.activity.currentSlide].text}" verticalAlign="middle"/>
 
 
 		
-		<mx:HBox x="40" y="210">
-<!--		<mx:Repeater id="myrep" dataProvider="{myXC}">
-			
-		<s:Button x="{myrep.currentItem.x}" y="206" width="90" height="105" label="Canada" chromeColor="#FFFFFF"
-				  cornerRadius="5" focusColor="#FFFFFF" icon="@Embed('../resources/Canada_flag.JPG')"
-				  iconPlacement="bottom"/>
-	-->	
+	<mx:HBox x="40" y="210">
+		<mx:Repeater id="myrep" dataProvider="{model.activity.slides[model.activity.currentSlide].entities}">
+		
+			<s:Button width="90" uid="{myrep.currentIndex}" height="105" label="{myrep.currentItem.title}" enabled="{myrep.currentItem.enabled}" chromeColor="{myrep.currentItem.chromeColor}"
+					  cornerRadius="5"  icon="{myrep.currentItem.imgSmall}"
+					  iconPlacement="bottom" click="buttonClicked(event);"/>
+	
+		</mx:Repeater> 
 
-		<s:Button width="90" height="105" uid="0" label="{slides.getTitleForEntityAtIndex(0)}" chromeColor="#FFFFFF"
-				  cornerRadius="5" focusColor="#FFFFFF" icon="{slides.getImgForEntityAtIndex(0)}"
-				  iconPlacement="bottom" click="buttonClicked(event);"/>
-			
-		<s:Button width="90" height="105" uid="1" label="{slides.getTitleForEntityAtIndex(1)}" chromeColor="#FFFFFF"
-				  cornerRadius="5" focusColor="#FFFFFF" icon="{slides.getImgForEntityAtIndex(1)}"
-				  iconPlacement="bottom" click="buttonClicked(event);"/>
-		
-		<s:Button width="90" height="105" uid="2" label="{slides.getTitleForEntityAtIndex(2)}" chromeColor="#FFFFFF"
-				  cornerRadius="5" focusColor="#FFFFFF" icon="{slides.getImgForEntityAtIndex(2)}"
-				  iconPlacement="bottom" click="buttonClicked(event);"/>
-		
-		<s:Button width="90" height="105" uid="3" label="{slides.getTitleForEntityAtIndex(3)}" chromeColor="#FFFFFF"
-				  cornerRadius="5" focusColor="#FFFFFF" icon="{slides.getImgForEntityAtIndex(3)}"
-				  iconPlacement="bottom" click="buttonClicked(event);"/>
-	<!--	</mx:Repeater> -->	
-			</mx:HBox>
+		</mx:HBox>
 	</s:NavigatorContent>
 

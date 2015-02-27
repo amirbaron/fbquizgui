@@ -10,14 +10,15 @@
 	<fx:Script>
 		<![CDATA[
 			[Bindable]
-			private var slides:SlidesModel = SlidesModel.getInstance();
+			private var activity:Activity = DataModel.getInstance().activity;
 		]]>
 	</fx:Script>
 
-	
-	<s:Image x="186" y="5" width="114" source="{slides.getCreatedByRatingImg()}"/>
-	<s:Image x="0" y="0" width="40" height="45" source="{slides.createdByImage}"/>
+	<!--
+	<s:Image x="186" y="5" width="114" source="{model.ratingImg}"/>
+	<s:Image x="0" y="0" width="40" height="45" source="{model.createdByImage}"/>
 	<s:Label x="48" y="10" width="146" height="25" color="#FEFCFC"
 			 text="Created by Alon Kiriati" verticalAlign="middle"/>
-	<s:Image x="378" y="0" width="90" height="46" source="{slides.getLogoImage()}"/>
+	<s:Image x="378" y="0" width="90" height="46" source="{model.logoImg}"/>
+	-->
 </s:SkinnableContainer>

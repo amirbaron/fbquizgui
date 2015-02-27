@@ -20,14 +20,14 @@
 		<![CDATA[
 			import mx.managers.CursorManager;
 
-			private var model:SlidesModel = null;
+			private var model:DataModel = null;
 			private function onJsonLoaded():void{
 				trace("On json loaded");
 				CursorManager.removeBusyCursor();
 			}
 			public function preInit():void{
 				CursorManager.setBusyCursor();
-				model = SlidesModel.getInstance();
+				model = DataModel.getInstance();
 				CursorManager.removeBusyCursor();
 			}
 			public function addSlides():void {
@@ -41,7 +41,7 @@
 	<fx:Script>
 		<![CDATA[
 			public function moveToSlide(num:int):void {
-				model.currentSlide=num;
+				model.activity.currentSlide=num;
 			}
 		]]>
 	</fx:Script>
