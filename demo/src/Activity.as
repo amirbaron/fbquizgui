@@ -64,7 +64,7 @@ package
 			ratingImage=jsonObject.createdBy.ratingImg;
 			imgSmall = jsonObject.createdBy.imgSmall;
 			
-			for each(var jsonSlide:Object in jsonObject.slides) {
+			for each(var jsonSlide:Object in jsonObject.slides[0].questions) {
 				var slide:Slide = new Slide(jsonSlide);
 				slides.addItem(slide);
 			}

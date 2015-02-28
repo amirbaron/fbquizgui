@@ -34,10 +34,12 @@
 				var slide:SlideComponent = new SlideComponent();
 				slide.id = "slide";
 				viewstack.addElement(slide);
-				
-				var slideSum:SlideComponent = new SlideComponent();
+
+				var slideSum:SumPointsSlideComponent = new SumPointsSlideComponent();
 				slideSum.id = "slideSum";
 				viewstack.addElement(slideSum);
+				
+
 			}
 		]]>
 	</fx:Script>
