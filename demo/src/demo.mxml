@@ -3,7 +3,7 @@
 
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
 			   xmlns:s="library://ns.adobe.com/flex/spark"
-			   xmlns:mx="library://ns.adobe.com/flex/mx" width="470" height="440" xmlns:local="*" preinitialize="preInit();">
+			   xmlns:mx="library://ns.adobe.com/flex/mx" width="485" height="440" xmlns:local="*" preinitialize="preInit();">
 	
 	<fx:Metadata>
 		[Event(name="jsonLoaded", type="flash.events.Event")]
@@ -32,8 +32,12 @@
 			}
 			public function addSlides():void {
 				var slide:SlideComponent = new SlideComponent();
-				slide.id = "slide1";
-				viewstack1.addElement(slide);
+				slide.id = "slide";
+				viewstack.addElement(slide);
+				
+				var slideSum:SlideComponent = new SlideComponent();
+				slideSum.id = "slideSum";
+				viewstack.addElement(slideSum);
 			}
 		]]>
 	</fx:Script>
@@ -46,10 +50,10 @@
 		]]>
 	</fx:Script>
 	<!--initialize="addSlides();"-->
-	<mx:ViewStack id="viewstack1" name="viewstack1" x="0" y="34" width="471" height="322" initialize="addSlides();">
+	<mx:ViewStack id="viewstack" name="viewstack" x="0" y="34" width="485" height="322" initialize="addSlides();">
 	</mx:ViewStack>
 	<local:SlidesChooserComponent/>
-	<s:SkinnableContainer x="468" y="0" width="2" height="400" backgroundColor="#3B5998"
+	<s:SkinnableContainer x="483" y="0" width="2" height="400" backgroundColor="#3B5998"
 						  contentBackgroundColor="#3B5998">
 	</s:SkinnableContainer>
 	<local:TrailerComponent id="trailer"/>

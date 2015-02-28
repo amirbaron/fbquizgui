@@ -43,10 +43,18 @@ package
 		
 		[Bindable]
 		public var selectedSlideIndex:int;
+
+		[Bindable]
+		public var slidesAnswered:int;
+		
+		[Bindable]
+		public var points:int;
 		
 		public function Activity(jsonObject:Object)
 		{
 			currentSlide =0;
+			points=0;
+			slidesAnswered=0;
 			name=jsonObject.name;
 			type=jsonObject.type;
 			title=jsonObject.title;
