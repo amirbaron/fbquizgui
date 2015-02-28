@@ -27,14 +27,16 @@ package
 		public var logoImg:String;
 
 		[Bindable]
-		public var createdByImage:String;
+		public var createdByFirstName:String;
 
 		[Bindable]
-		public var createdBy:String;
+		public var createdByLastName:String;
 
 		[Bindable]
 		public var ratingImage:String;
 		
+		[Bindable]
+		public var imgSmall:String;
 		
 		[Bindable]
 		public var entities:Object;
@@ -48,9 +50,11 @@ package
 			name=jsonObject.name;
 			type=jsonObject.type;
 			title=jsonObject.title;
-			logoImg=jsonObject.createdBy.logoImg;
-			createdBy=jsonObject.createdBy.firstName;
+			logoImg=jsonObject.logoImg;
+			createdByFirstName=jsonObject.createdBy.firstName;
+			createdByLastName=jsonObject.createdBy.lastName;
 			ratingImage=jsonObject.createdBy.ratingImg;
+			imgSmall = jsonObject.createdBy.imgSmall;
 			
 			for each(var jsonSlide:Object in jsonObject.slides) {
 				var slide:Slide = new Slide(jsonSlide);

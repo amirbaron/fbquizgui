@@ -9,16 +9,15 @@
 	</fx:Declarations>
 	<fx:Script>
 		<![CDATA[
-			[Bindable]
-			private var activity:Activity = DataModel.getInstance().activity;
+			private var model:DataModel = DataModel.getInstance();
 		]]>
 	</fx:Script>
 
-	<!--
-	<s:Image x="186" y="5" width="114" source="{model.ratingImg}"/>
-	<s:Image x="0" y="0" width="40" height="45" source="{model.createdByImage}"/>
+	
+	<s:Image x="186" y="5" width="114" source="{model.activity.ratingImage}"/>
+	<s:Image x="0" y="0" width="40" height="45" source="{model.activity.imgSmall}"/>
 	<s:Label x="48" y="10" width="146" height="25" color="#FEFCFC"
-			 text="Created by Alon Kiriati" verticalAlign="middle"/>
-	<s:Image x="378" y="0" width="90" height="46" source="{model.logoImg}"/>
-	-->
+			 text="Created by {model.activity.createdByFirstName} {model.activity.createdByLastName}" verticalAlign="middle"/>
+	<s:Image x="378" y="0" width="90" height="46" source="{model.activity.logoImg}"/>
+	
 </s:SkinnableContainer>
