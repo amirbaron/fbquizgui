@@ -47,6 +47,15 @@
 
 					if (model.activity.slidesAnswered == model.activity.slides.length)
 					{
+						model.activity.summingPrecantage = Math.round((model.activity.points*100)/model.activity.slidesAnswered);
+						if (model.activity.summingPrecantage > 60)
+							model.activity.summingText = model.activity.summingTextHigh;
+						else if (model.activity.summingPrecantage > 30)
+							model.activity.summingText = model.activity.summingTextMedium;
+						else
+							model.activity.summingText = model.activity.summingTextLow;
+
+						
 						sleep(100, moveToSum, [] );	
 					}
 					else if ((model.activity.currentSlide) < model.activity.slides.length-1)
