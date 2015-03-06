@@ -3,6 +3,6 @@
 					  xmlns:s="library://ns.adobe.com/flex/spark" 
 					  xmlns:mx="library://ns.adobe.com/flex/mx"
 					  x="0" y="0" width="485" height="35" backgroundColor="#3B5998">
-	<s:Label x="68" y="9" color="#FFFFFF" fontFamily="Arial" fontSize="22" fontWeight="bold"
+	<s:Label x="30" y="9" color="#FFFFFF" fontFamily="Verdana" fontSize="22" fontWeight="bold" textAlign="center"
 			 text="How well do you know the world?"/>
 </s:SkinnableContainer>

@@ -2,7 +2,7 @@
 <s:SkinnableContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
 					  xmlns:s="library://ns.adobe.com/flex/spark" 
 					  xmlns:mx="library://ns.adobe.com/flex/mx"
-					  x="0" y="365" width="485" height="30" backgroundAlpha="0.76"
+					  x="7" y="7" width="464" height="30" backgroundAlpha="0.76"
 					  backgroundColor="#2550CB" color="#FAF7F7" fontFamily="Arial" fontSize="22"
 					  fontWeight="bold" textAlign="center" >
 

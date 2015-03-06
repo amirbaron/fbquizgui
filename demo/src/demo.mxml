@@ -3,7 +3,7 @@
 
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
 			   xmlns:s="library://ns.adobe.com/flex/spark"
-			   xmlns:mx="library://ns.adobe.com/flex/mx" width="485" height="440" xmlns:local="*" preinitialize="preInit();">
+			   xmlns:mx="library://ns.adobe.com/flex/mx" width="485" height="600" xmlns:local="*" preinitialize="preInit();">
 	
 	<fx:Metadata>
 		[Event(name="jsonLoaded", type="flash.events.Event")]
@@ -12,9 +12,8 @@
 	<s:layout>
 		<s:BasicLayout />
 	</s:layout>
-	<local:HeaderComponent id="header"/>
-	<s:SkinnableContainer x="0" y="0" width="2" height="400" backgroundColor="#3B5998">
-	</s:SkinnableContainer>
+	<s:BorderContainer width="479" x="3" y="3" cornerRadius="2" borderColor="#cccccc" backgroundColor="#eceff6">
+		
 
 	<fx:Script>
 		<![CDATA[
@@ -52,13 +51,14 @@
 		]]>
 	</fx:Script>
 	<!--initialize="addSlides();"-->
-	<mx:ViewStack id="viewstack" name="viewstack" x="0" y="34" width="485" height="322" initialize="addSlides();">
+	<mx:ViewStack id="viewstack" name="viewstack" x="0" y="37" width="471" height="315" initialize="addSlides();">
 	</mx:ViewStack>
 	<local:SlidesChooserComponent/>
-	<s:SkinnableContainer x="483" y="0" width="2" height="400" backgroundColor="#3B5998"
-						  contentBackgroundColor="#3B5998">
-	</s:SkinnableContainer>
-	<local:TrailerComponent id="trailer"/>
+	</s:BorderContainer>
+	<s:BorderContainer width="479" x="3" y="365" height="120" cornerRadius="2" borderColor="#cccccc">
+
+		<local:TrailerComponent id="trailer"/>
+		</s:BorderContainer>
 
 
 	

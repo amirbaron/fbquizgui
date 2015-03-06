@@ -97,7 +97,7 @@
 			]]>
 		</fx:Script>
 		
-		<s:Image x="0" y="4" width="485" height="192"
+		<s:Image x="7" y="4" width="471" height="192"
 				 source="{model.activity.slides[model.activity.currentSlide].imgSmall}"/>
 		<s:Label x="7" y="160" width="471" height="31" backgroundAlpha="0.76"
 				 backgroundColor="#2550CB" color="#FBF7F7" fontFamily="Verdana" fontSize="16"
@@ -107,11 +107,11 @@
 
 
 		
-	<mx:HBox x="40" y="210">
+	<mx:HBox x="7" y="200" width="471">
 		<mx:Repeater id="myrep"
 					 dataProvider="{model.activity.slides[model.activity.currentSlide].entities}">
 		
-			<s:Button width="90" height="105" label="{myrep.currentItem.title}"
+			<s:Button label="{myrep.currentItem.title}" width="110"
 					  chromeColor="{myrep.currentItem.chromeColor}" click="buttonClicked(event);"
 					  cornerRadius="5" enabled="{myrep.currentItem.enabled}"
 					  icon="{myrep.currentItem.imgSmall}" iconPlacement="bottom"
