@@ -8,9 +8,9 @@
 	<fx:Metadata>
 		[Event(name="jsonLoaded", type="flash.events.Event")]
 	</fx:Metadata>
-	<s:BorderContainer width="485" x="0" y="0" borderColor="#cccccc" backgroundColor="#eceff6">
+	<s:BorderContainer width="645" x="0" y="0" borderColor="#cccccc" backgroundColor="#eceff6">
 	
-	<s:BorderContainer width="479" height="350" x="3" y="3" cornerRadius="2" borderColor="#cccccc" >
+	<s:BorderContainer width="479" height="510" x="3" y="3" cornerRadius="2" borderColor="#cccccc" >
 		
 
 	<fx:Script>
@@ -49,11 +49,11 @@
 		]]>
 	</fx:Script>
 	<!--initialize="addSlides();"-->
-	<mx:ViewStack id="viewstack" name="viewstack" x="0" y="3" width="471" height="315" initialize="addSlides();">
+	<mx:ViewStack id="viewstack" name="viewstack" x="0" y="3" width="471" height="475" initialize="addSlides();">
 	</mx:ViewStack>
 	<local:SlidesChooserComponent/>
 	</s:BorderContainer>
-	<s:BorderContainer width="479" x="3" y="365" height="120" cornerRadius="2" borderColor="#cccccc">
+	<s:BorderContainer width="479" x="3" y="525" height="120" cornerRadius="2" borderColor="#cccccc">
 
 		<local:TrailerComponent id="trailer"/>
 		</s:BorderContainer>
