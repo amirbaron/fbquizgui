@@ -13,7 +13,9 @@
 			private var model:DataModel = DataModel.getInstance();
 			protected function skinnablecontainer1_preinitializeHandler(event:FlexEvent):void
 			{
-				model.loaderInfo=this.loaderInfo;
+				
+				model.loaderInfo=this.parent.parent.parent.parent.parent.parent.parent.parent.parent.parent.parent.root.loaderInfo;
+				model.loadConfigFromUrl();
 			}
 			
 		]]>
