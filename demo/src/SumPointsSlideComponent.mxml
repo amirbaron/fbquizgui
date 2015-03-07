@@ -3,6 +3,8 @@
 					xmlns:s="library://ns.adobe.com/flex/spark"
 					xmlns:mx="library://ns.adobe.com/flex/mx"
 					width="485" height="337" label="View 1" hideEffect="fade" showEffect="fade">
+	
+	
 	<fx:Script>
 		<![CDATA[
 			private var model:DataModel = DataModel.getInstance()
@@ -11,6 +13,7 @@
 				model.activity.currentSlide=event.currentTarget.name;
 			}
 			
+
 			
 		]]>
 	</fx:Script>

@@ -3,26 +3,47 @@
 					  xmlns:s="library://ns.adobe.com/flex/spark" 
 					  xmlns:mx="library://ns.adobe.com/flex/mx"
 					  x="7" y="475" >
+	<fx:Declarations>
+		<s:Fade id="fadeIn" duration="500" target="{mx.core.FlexGlobals.topLevelApplication.sli}" 
+				alphaFrom="0" alphaTo="1"/>
+		<s:Fade id="fadeOut" duration="500" target="{mx.core.FlexGlobals.topLevelApplication.slideContainer}" 
+				alphaFrom="1" alphaTo="0" effectEnd="onFadeOutEnd();"/>		   
+	</fx:Declarations>
 
 	<fx:Script>
 		<![CDATA[
+			
+			private var toSlide:int=0;
 			private var model:DataModel = DataModel.getInstance()
-			public function buttonClicked(event:Event):void 
+			public function buttonClicked(event:MouseEvent):void 
 			{
-				model.activity.currentSlide=(event.currentTarget.value-1);
+				model.activity.currentSlide = event.currentTarget.name;
+				fadeOut.play();
+			}
+
+			private function onFadeOutEnd():void 
+			{
+				model.activity.currentSlide=toSlide;
+			//	fadeIn.play();				
+			
 			}
 			
 		]]>
 	</fx:Script>
+	<mx:HBox x="150" y="4">
 	
-	
-		<s:HSlider x="0" y="12" change="buttonClicked(event);" width="460"  maximum="7" minimum="1"  
+	<mx:Repeater id="myrep" dataProvider="{ model.activity.slides}" > 
+		<s:Button width="15" height="15" name="{myrep.currentIndex}"  chromeColor="{myrep.currentItem.chooserChromeColor}" color="#000000"
+				  cornerRadius="20" fontSize="7" click="buttonClicked(event);"/>
+	</mx:Repeater>
+</mx:HBox>	
+		<!--<s:HSlider x="0" y="12" change="buttonClicked(event);" width="460"  maximum="7" minimum="1"  
 				    dataTipPrecision="0" value="{model.activity.currentSlide+1}" />
 		<mx:HBox x="2"  y="4">
 		<mx:Repeater id="myrep" dataProvider="{ model.activity.slides}" > 
 			<s:Label fontSize="10" width="{475/model.activity.slides.length}" name="{myrep.currentIndex}" text="{myrep.currentIndex+1}" color="{myrep.currentItem.chooserChromeColor}"/>
 		</mx:Repeater>
-		</mx:HBox>
+		</mx:HBox>-->
 
 
 	
