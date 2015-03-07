@@ -8,11 +8,9 @@
 	<fx:Metadata>
 		[Event(name="jsonLoaded", type="flash.events.Event")]
 	</fx:Metadata>
+	<s:BorderContainer width="485" x="0" y="0" borderColor="#cccccc" backgroundColor="#eceff6">
 	
-	<s:layout>
-		<s:BasicLayout />
-	</s:layout>
-	<s:BorderContainer width="479" x="3" y="3" cornerRadius="2" borderColor="#cccccc" backgroundColor="#eceff6">
+	<s:BorderContainer width="479" height="350" x="3" y="3" cornerRadius="2" borderColor="#cccccc" >
 		
 
 	<fx:Script>
@@ -59,6 +57,7 @@
 
 		<local:TrailerComponent id="trailer"/>
 		</s:BorderContainer>
+	</s:BorderContainer>
 
 
 	

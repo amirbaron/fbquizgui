@@ -16,12 +16,11 @@
 	</fx:Script>
 	
 	
-		<s:HSlider x="0" y="12" change="buttonClicked(event);" width="{ (model.activity.slides.length * 30)-2}"  maximum="7" minimum="1"  
+		<s:HSlider x="0" y="12" change="buttonClicked(event);" width="460"  maximum="7" minimum="1"  
 				    dataTipPrecision="0" value="{model.activity.currentSlide+1}" />
 		<mx:HBox x="2"  y="4">
 		<mx:Repeater id="myrep" dataProvider="{ model.activity.slides}" > 
-			<s:Label fontSize="10" name="{myrep.currentIndex}" text="{myrep.currentIndex+1}" color="{myrep.currentItem.chooserChromeColor}"/>
-			<mx:Spacer width="10"/>
+			<s:Label fontSize="10" width="{475/model.activity.slides.length}" name="{myrep.currentIndex}" text="{myrep.currentIndex+1}" color="{myrep.currentItem.chooserChromeColor}"/>
 		</mx:Repeater>
 		</mx:HBox>
 
