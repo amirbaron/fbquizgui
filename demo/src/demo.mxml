@@ -51,7 +51,7 @@
 		]]>
 	</fx:Script>
 	<!--initialize="addSlides();"-->
-	<mx:ViewStack id="viewstack" name="viewstack" x="0" y="37" width="471" height="315" initialize="addSlides();">
+	<mx:ViewStack id="viewstack" name="viewstack" x="0" y="3" width="471" height="315" initialize="addSlides();">
 	</mx:ViewStack>
 	<local:SlidesChooserComponent/>
 	</s:BorderContainer>

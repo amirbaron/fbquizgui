@@ -2,29 +2,31 @@
 <s:SkinnableContainer xmlns:fx="http://ns.adobe.com/mxml/2009" 
 					  xmlns:s="library://ns.adobe.com/flex/spark" 
 					  xmlns:mx="library://ns.adobe.com/flex/mx"
-					  x="7" y="7" width="464" height="30" backgroundAlpha="0.76"
-					  backgroundColor="#2550CB" color="#FAF7F7" fontFamily="Arial" fontSize="22"
-					  fontWeight="bold" textAlign="center" >
+					  x="7" y="315" >
 
 	<fx:Script>
 		<![CDATA[
 			private var model:DataModel = DataModel.getInstance()
-			public function buttonClicked(event:MouseEvent):void 
+			public function buttonClicked(event:Event):void 
 			{
-				model.activity.currentSlide=event.currentTarget.name;
+				model.activity.currentSlide=(event.currentTarget.value-1);
 			}
- 
 			
 		]]>
 	</fx:Script>
 	
 	
-	<mx:HBox x="10" y="4">
+		<s:HSlider x="0" y="12" change="buttonClicked(event);" width="{ (model.activity.slides.length * 30)-2}"  maximum="7" minimum="1"  
+				    dataTipPrecision="0" value="{model.activity.currentSlide+1}" />
+		<mx:HBox x="2"  y="4">
 		<mx:Repeater id="myrep" dataProvider="{ model.activity.slides}" > 
-			<s:Button width="25" height="23" name="{myrep.currentIndex}" label="{myrep.currentIndex+1}" chromeColor="{myrep.currentItem.chooserChromeColor}" color="#000000"
-					  cornerRadius="20" fontSize="7" click="buttonClicked(event);"/>
+			<s:Label fontSize="10" name="{myrep.currentIndex}" text="{myrep.currentIndex+1}" color="{myrep.currentItem.chooserChromeColor}"/>
+			<mx:Spacer width="10"/>
 		</mx:Repeater>
-	</mx:HBox>
+		</mx:HBox>
+
+
+	
 	
 
 </s:SkinnableContainer>	

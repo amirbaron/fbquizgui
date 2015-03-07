@@ -2,20 +2,52 @@
 	<s:NavigatorContent xmlns:fx="http://ns.adobe.com/mxml/2009"
 						xmlns:s="library://ns.adobe.com/flex/spark"
 						xmlns:mx="library://ns.adobe.com/flex/mx"
-						width="485" height="337" label="View 1" hideEffect="fade" showEffect="fade">
+						width="485" height="337" label="View 1" >
 		
 		<fx:Declarations>
-			<!--<local:SlidesModel id="slides" xmlns:local="*" />-->
+			<s:Fade id="fadeIn" duration="2000" target="{slideContainer}" 
+					alphaFrom="0" alphaTo="1"/>
+			<s:Fade id="fadeOut" duration="2000" target="{slideContainer}" 
+					alphaFrom="1" alphaTo="0" effectEnd="onFadeOutEnd();"/>		   
 		</fx:Declarations>
-	
 		
 		<fx:Script>
 			<![CDATA[
 				import mx.core.FlexGlobals;
 				
 				private var model:DataModel = DataModel.getInstance();
+				
+				private function onFadeOutEnd():void {
+					if (model.activity.slidesAnswered == model.activity.slides.length)
+					{
+						model.activity.summingPrecantage = Math.round((model.activity.points*100)/model.activity.slidesAnswered);
+						if (model.activity.summingPrecantage > 60)
+							model.activity.summingText = model.activity.summingTextHigh;
+						else if (model.activity.summingPrecantage > 30)
+							model.activity.summingText = model.activity.summingTextMedium;
+						else
+							model.activity.summingText = model.activity.summingTextLow;
+						
+						
+						FlexGlobals.topLevelApplication.viewstack.selectedIndex=1;
+					}
+					else if ((model.activity.currentSlide) < model.activity.slides.length-1)
+					{
+						model.activity.currentSlide++;;
+						fadeIn.play();
+					}
+					else
+					{
+						fadeIn.play();
+					}
+
+					
+				}
+				
 				public function buttonClicked(event:MouseEvent):void 
 				{
+					fadeOut.play();					
+
 					trace("Pressed on button with uid:" + event.target.uid);
 					model.activity.slidesAnswered++;
 					var pointsRewardedForSlide = model.activity.slides[model.activity.currentSlide].entities[event.target.uid].points;
@@ -23,7 +55,7 @@
 					{
 						model.activity.points += pointsRewardedForSlide
 						model.activity.slides[model.activity.currentSlide].entities[event.target.uid].chromeColor = 13434726;
-						model.activity.slides[model.activity.currentSlide].chooserChromeColor = 13434777;
+						model.activity.slides[model.activity.currentSlide].chooserChromeColor = 52326;
 						model.activity.slides[model.activity.currentSlide].points += pointsRewardedForSlide;
 					}
 					else
@@ -45,59 +77,19 @@
 						model.activity.slides[model.activity.currentSlide].entities[i].enabled = false;
 					}
 
-					if (model.activity.slidesAnswered == model.activity.slides.length)
-					{
-						model.activity.summingPrecantage = Math.round((model.activity.points*100)/model.activity.slidesAnswered);
-						if (model.activity.summingPrecantage > 60)
-							model.activity.summingText = model.activity.summingTextHigh;
-						else if (model.activity.summingPrecantage > 30)
-							model.activity.summingText = model.activity.summingTextMedium;
-						else
-							model.activity.summingText = model.activity.summingTextLow;
 
-						
-						sleep(100, moveToSum, [] );	
-					}
-					else if ((model.activity.currentSlide) < model.activity.slides.length-1)
-					{
-						sleep(100, moveSlide, [] );
-					}
-					else
-					{
-						sleep(100, doNothing, [] );
-					}
 					
 					return;
 					
 				}
 				
-				function sleep(counter: int, subsequentFunction: Function, args: Array): void
-				{
-					if (counter > 0)
-						callLater(sleep, [counter - 1, subsequentFunction, args]);
-					else
-						callLater(subsequentFunction, args);
-				}
-				
-				function moveSlide()
-				{
-					model.activity.currentSlide++;;
-				}
-
-				function moveToSum()
-				{
-					FlexGlobals.topLevelApplication.viewstack.selectedIndex=1;
-				}
-				
-				function doNothing()
-				{
-					
-				}
 				
 			]]>
 		</fx:Script>
-		
-		<s:Image x="7" y="4" width="471" height="192"
+
+		<s:Group id="slideContainer">
+
+		<s:Image id="mainImage" x="7" y="4" width="471" height="192"
 				 source="{model.activity.slides[model.activity.currentSlide].imgSmall}"/>
 		<s:Label x="7" y="160" width="471" height="31" backgroundAlpha="0.76"
 				 backgroundColor="#2550CB" color="#FBF7F7" fontFamily="Verdana" fontSize="16"
@@ -107,7 +99,7 @@
 
 
 		
-	<mx:HBox x="7" y="200" width="471">
+	<mx:HBox id="allButtons" x="7" y="200" width="471">
 		<mx:Repeater id="myrep"
 					 dataProvider="{model.activity.slides[model.activity.currentSlide].entities}">
 		
@@ -120,5 +112,7 @@
 		</mx:Repeater> 
 
 		</mx:HBox>
+	</s:Group>	
+
 	</s:NavigatorContent>
 

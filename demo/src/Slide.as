@@ -29,7 +29,7 @@ package
 			}
 			
 			points = 0;
-			chooserChromeColor = 16777215;;
+			chooserChromeColor = 13421772;
 		}
 		
 
