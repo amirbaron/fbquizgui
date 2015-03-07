@@ -34,12 +34,13 @@ package
 			{
 				throw new Error ("We cannot create a new instance. Please use Singleton.getInstance()");
 			}
-			
-			loadConfigFromUrl();
+			if(DEBUG)
+				loadConfigFromUrl();
 		}
 		
 		protected function extractIdFromUrl() : String
 		{
+			
 			var url:String = loaderInfo.loaderURL;
 			var _loc3_:Array = null;
 			var _loc2_:RegExp = new RegExp("item=([^&]*)");
@@ -51,7 +52,7 @@ package
 			return _loc3_[1];
 		}
 		
-		private function loadConfigFromUrl():void
+		public function loadConfigFromUrl():void
 		{
 			var id:String;
 			if(DEBUG==true){
