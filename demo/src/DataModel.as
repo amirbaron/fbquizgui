@@ -40,6 +40,7 @@ package
 		
 		protected function extractIdFromUrl() : String
 		{
+			
 			var url:String = loaderInfo.loaderURL;
 			var _loc3_:Array = null;
 			var _loc2_:RegExp = new RegExp("item=([^&]*)");
