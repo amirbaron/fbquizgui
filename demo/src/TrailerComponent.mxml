@@ -13,12 +13,13 @@
 			private var model:DataModel = DataModel.getInstance();
 			protected function skinnablecontainer1_preinitializeHandler(event:FlexEvent):void
 			{
-				
-				model.loaderInfo=this.loaderInfo;
+				model.loaderInfo=this.parent.parent.parent.parent.parent.parent.parent.parent.parent.parent.parent.root.loaderInfo;
+				model.loadConfigFromUrl();
 			}
 			
 		]]>
 	</fx:Script>
+
 
 	<s:Label color="#666666" x="7" y="3"  fontFamily="Verdana" fontSize="22" 
 			 text="How well do you know the world?"/>

@@ -34,8 +34,9 @@ package
 			{
 				throw new Error ("We cannot create a new instance. Please use Singleton.getInstance()");
 			}
-			
-			loadConfig();
+			if(DEBUG){
+				loadConfig();
+			}
 		}
 		
 		protected function extractIdFromUrl() : String
@@ -63,7 +64,7 @@ package
 			}
 		}
 		
-		protected function loadConfigFromUrl():void
+		public function loadConfigFromUrl():void
 		{
 			Parse.CloudCode("item",{"id":extractIdFromUrl()},completeHandlerUrl,function():void{
 				trace("Failed to load json");
