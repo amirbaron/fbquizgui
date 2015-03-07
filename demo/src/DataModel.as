@@ -17,7 +17,7 @@ package
 		private static var instance:DataModel = new DataModel();
 		private var jsonObject:Object;
 		private var CONFIG_URL:String = "demo.json";
-		private static var DEBUG:Boolean = true;
+		private static var DEBUG:Boolean = false;
 		
 		[Bindable]
 		public var activity:Activity;
