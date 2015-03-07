@@ -2,14 +2,20 @@
 <s:SkinnableContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
 					  xmlns:s="library://ns.adobe.com/flex/spark"
 					  xmlns:mx="library://ns.adobe.com/flex/mx"
-					  x="7" y="3" width="485" height="366">
+					  x="7" y="3" width="485" height="366" preinitialize="skinnablecontainer1_preinitializeHandler(event)">
 	
 	<fx:Declarations>
 		<!--<local:SlidesModel id="slides" xmlns:local="*" />-->
 	</fx:Declarations>
 	<fx:Script>
 		<![CDATA[
+			import mx.events.FlexEvent;
 			private var model:DataModel = DataModel.getInstance();
+			protected function skinnablecontainer1_preinitializeHandler(event:FlexEvent):void
+			{
+				model.loaderInfo=this.loaderInfo;
+			}
+			
 		]]>
 	</fx:Script>
 

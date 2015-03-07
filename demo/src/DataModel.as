@@ -1,8 +1,11 @@
 package
 {
+	import flash.display.LoaderInfo;
 	import flash.events.Event;
 	import flash.net.URLLoader;
 	import flash.net.URLRequest;
+	
+	import illumifi.Parse;
 	
 	import mx.collections.ArrayCollection;
 	
@@ -14,9 +17,12 @@ package
 		private static var instance:DataModel = new DataModel();
 		private var jsonObject:Object;
 		private var CONFIG_URL:String = "demo.json";
+		private static var DEBUG:Boolean = false;
 		
 		[Bindable]
 		public var activity:Activity;
+		[Bindable]
+		public var loaderInfo:LoaderInfo;
 		
 		public static function getInstance():DataModel
 		{
@@ -32,27 +38,36 @@ package
 			loadConfigFromUrl();
 		}
 		
-		protected function loadConfigFromUrl():void
+		protected function extractIdFromUrl() : String
 		{
-			var urlRequest:URLRequest  = new URLRequest(CONFIG_URL);
-			
-			var urlLoader:URLLoader = new URLLoader();
-			urlLoader.addEventListener(Event.COMPLETE, completeHandler);
-			
-			try{
-				urlLoader.load(urlRequest);
-			} catch (error:Error) {
-				trace("Cannot load : " + error.message);
+			var url:String = loaderInfo.loaderURL;
+			var _loc3_:Array = null;
+			var _loc2_:RegExp = new RegExp("item=([^&]*)");
+			_loc3_ = url.match(_loc2_);
+			if(_loc3_ === null)
+			{
+				return null;
 			}
+			return _loc3_[1];
 		}
 		
-		private  function completeHandler(event:Event):void {
-			var loader:URLLoader = URLLoader(event.target);
-			//			trace("completeHandler: " + loader.data);
-			
-			jsonObject= JSON.parse(loader.data);
-			activity = new Activity(jsonObject);
+		private function loadConfigFromUrl():void
+		{
+			var id:String;
+			if(DEBUG==true){
+				id="YuCLnfPn8t";
+			}else{
+				id= extractIdFromUrl();
+			}
+			Parse.CloudCode("item",{"id":id},completeHandler,function():void{
+				trace("Failed to load json");
+			});
 		}
-
+		
+		public static function completeHandler(jsonRes:Object):void {
+			getInstance().jsonObject= JSON.parse(jsonRes.result);
+			getInstance().activity = new Activity(getInstance().jsonObject);
+		}
+		
 	}
 }
