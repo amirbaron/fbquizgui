@@ -15,16 +15,16 @@
 		]]>
 	</fx:Script>
 
-	<s:Image x="0" y="2" width="485" height="310"
+	<s:Image x="7" y="75" width="471" height="353"
 			 source="{model.activity.summingImage}"/>
-	<mx:Box x="350" y="70" width="100" verticalAlign="middle" horizontalAlign="center" backgroundAlpha="0.85"  height="100" cornerRadius="100"  borderStyle="solid" borderColor="0xFFFFFF" backgroundColor="#2550CB" >
+	<mx:Box x="350" y="100" width="100" verticalAlign="middle" horizontalAlign="center" backgroundAlpha="0.85"  height="100" cornerRadius="100"  borderStyle="solid" borderColor="0xFFFFFF" backgroundColor="#2550CB" >
 	<s:Label    
 			  color="#FBF7F7" fontFamily="Verdana" fontSize="25"
 			 fontStyle="italic" 
 			 text="{model.activity.summingPrecantage}%"
 			 verticalAlign="middle"/>
 	</mx:Box>
-	<s:Label x="0" y="4" width="485" height="60" backgroundAlpha="0.76"
+	<s:Label x="7" y="4" width="471" height="60" backgroundAlpha="0.76"
 			 backgroundColor="#2550CB" color="#FBF7F7" fontFamily="Verdana" fontSize="16"
 			 fontStyle="italic" paddingLeft="15"
 			 text="{model.activity.summingText}"

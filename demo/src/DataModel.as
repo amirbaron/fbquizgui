@@ -17,7 +17,7 @@ package
 		private static var instance:DataModel = new DataModel();
 		private var jsonObject:Object;
 		private var CONFIG_URL:String = "demo.json";
-		private static var DEBUG:Boolean = false;
+		private static var DEBUG:Boolean = true;
 		
 		[Bindable]
 		public var activity:Activity;
@@ -35,7 +35,7 @@ package
 				throw new Error ("We cannot create a new instance. Please use Singleton.getInstance()");
 			}
 			
-			loadConfigFromUrl();
+			loadConfig();
 		}
 		
 		protected function extractIdFromUrl() : String
@@ -51,23 +51,49 @@ package
 			return _loc3_[1];
 		}
 		
-		private function loadConfigFromUrl():void
+		protected function loadConfig()
 		{
-			var id:String;
 			if(DEBUG==true){
-				id="YuCLnfPn8t";
-			}else{
-				id= extractIdFromUrl();
+				loadConfigFromLocalFile();
 			}
-			Parse.CloudCode("item",{"id":id},completeHandler,function():void{
+			else
+			{
+				loadConfigFromUrl();	
+			}
+		}
+		
+		protected function loadConfigFromUrl():void
+		{
+			Parse.CloudCode("item",{"id":extractIdFromUrl()},completeHandlerUrl,function():void{
 				trace("Failed to load json");
 			});
 		}
 		
-		public static function completeHandler(jsonRes:Object):void {
+		protected function loadConfigFromLocalFile():void
+		{
+			var urlRequest:URLRequest  = new URLRequest(CONFIG_URL);
+			
+			var urlLoader:URLLoader = new URLLoader();
+			urlLoader.addEventListener(Event.COMPLETE, completeHandlerLocal);
+			
+			try{
+				urlLoader.load(urlRequest);
+			} catch (error:Error) {
+				trace("Cannot load : " + error.message);
+			}
+		}
+		
+		public static function completeHandlerUrl(jsonRes:Object):void {
 			getInstance().jsonObject= JSON.parse(jsonRes.result);
 			getInstance().activity = new Activity(getInstance().jsonObject);
 		}
-		
+
+		public static  function completeHandlerLocal(event:Event):void {
+			var loader:URLLoader = URLLoader(event.target);
+			//			trace("completeHandler: " + loader.data);
+			
+			getInstance().jsonObject = JSON.parse(loader.data);
+			getInstance().activity = new Activity(getInstance().jsonObject);
+		}
 	}
 }
