@@ -17,7 +17,7 @@ package
 		private static var instance:DataModel = new DataModel();
 		private var jsonObject:Object;
 		private var CONFIG_URL:String = "demo.json";
-		private static var DEBUG:Boolean = false;
+		public static var DEBUG:Boolean = true;
 		
 		[Bindable]
 		public var activity:Activity;
@@ -33,9 +33,6 @@ package
 			if(instance)
 			{
 				throw new Error ("We cannot create a new instance. Please use Singleton.getInstance()");
-			}
-			if(DEBUG){
-				loadConfig();
 			}
 		}
 		
@@ -53,17 +50,6 @@ package
 			return _loc3_[1];
 		}
 		
-		protected function loadConfig()
-		{
-			if(DEBUG==true){
-				loadConfigFromLocalFile();
-			}
-			else
-			{
-				loadConfigFromUrl();	
-			}
-		}
-		
 		public function loadConfigFromUrl():void
 		{
 			Parse.CloudCode("item",{"id":extractIdFromUrl()},completeHandlerUrl,function():void{
@@ -71,7 +57,7 @@ package
 			});
 		}
 		
-		protected function loadConfigFromLocalFile():void
+		public function loadConfigFromLocalFile():void
 		{
 			var urlRequest:URLRequest  = new URLRequest(CONFIG_URL);
 			

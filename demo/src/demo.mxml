@@ -3,28 +3,39 @@
 
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
 			   xmlns:s="library://ns.adobe.com/flex/spark"
-			   xmlns:mx="library://ns.adobe.com/flex/mx" width="485" height="600" xmlns:local="*" preinitialize="preInit();">
+			   xmlns:mx="library://ns.adobe.com/flex/mx" width="485" height="485" xmlns:local="*" preinitialize="preInit(event);">
+
 	
 	<fx:Metadata>
 		[Event(name="jsonLoaded", type="flash.events.Event")]
+		[SWF(width='486', height='500')]
 	</fx:Metadata>
-	<s:BorderContainer width="645" x="0" y="0" borderColor="#cccccc" backgroundColor="#eceff6">
 	
-	<s:BorderContainer width="479" height="510" x="3" y="3" cornerRadius="2" borderColor="#cccccc" >
 		
 
 	<fx:Script>
 		<![CDATA[
 			import mx.managers.CursorManager;
+			import mx.events.FlexEvent;
+			private var model:DataModel = DataModel.getInstance();
 
-			private var model:DataModel = null;
 			private function onJsonLoaded():void{
 				trace("On json loaded");
 				CursorManager.removeBusyCursor();
 			}
-			public function preInit():void{
+			
+			public function preInit(event:FlexEvent):void{
 				CursorManager.setBusyCursor();
 				model = DataModel.getInstance();
+				if(DataModel.DEBUG==true){
+					
+					DataModel.getInstance().loadConfigFromLocalFile();
+				}
+				else
+				{
+					model.loaderInfo=this.root.loaderInfo;
+					DataModel.getInstance().loadConfigFromUrl();	
+				}
 				CursorManager.removeBusyCursor();
 			}
 			public function addSlides():void {
@@ -38,6 +49,8 @@
 				
 
 			}
+			
+
 		]]>
 	</fx:Script>
 	
@@ -49,14 +62,12 @@
 		]]>
 	</fx:Script>
 	<!--initialize="addSlides();"-->
-	<mx:ViewStack id="viewstack" name="viewstack" x="0" y="3" width="471" height="475" initialize="addSlides();">
+	<mx:ViewStack id="viewstack" name="viewstack" x="0" y="0" width="485" height="475" initialize="addSlides();">
 	</mx:ViewStack>
 	<local:SlidesChooserComponent/>
-	</s:BorderContainer>
-	<s:BorderContainer width="479" x="3" y="525" height="120" cornerRadius="2" borderColor="#cccccc">
+	<s:BorderContainer width="485" x="0" y="405" height="80" borderColor="#cccccc" backgroundColor="#eceff6">
 
 		<local:TrailerComponent id="trailer"/>
-		</s:BorderContainer>
 	</s:BorderContainer>
 
 

@@ -89,9 +89,9 @@
 
 		<s:Group id="slideContainer">
 
-		<s:Image id="mainImage" x="7" y="4" width="471" height="353"
+		<s:Image id="mainImage" x="0" y="0" width="485" height="272"
 				 source="{model.activity.slides[model.activity.currentSlide].imgSmall}"/>
-		<s:Label x="7" y="315" width="471" height="31" backgroundAlpha="0.76"
+		<s:Label x="0" y="235" width="485" height="31" backgroundAlpha="0.76"
 				 backgroundColor="#2550CB" color="#FBF7F7" fontFamily="Verdana" fontSize="16"
 				 fontStyle="italic" paddingLeft="15"
 				 text="{model.activity.slides[model.activity.currentSlide].text}"
@@ -99,11 +99,11 @@
 
 
 		
-	<mx:HBox id="allButtons" x="7" y="360" width="471">
+	<mx:HBox id="allButtons" x="0" y="275" width="485">
 		<mx:Repeater id="myrep"
 					 dataProvider="{model.activity.slides[model.activity.currentSlide].entities}">
 		
-			<s:Button label="{myrep.currentItem.title}" width="110"
+			<s:Button label="{myrep.currentItem.title}" width="115"
 					  chromeColor="{myrep.currentItem.chromeColor}" click="buttonClicked(event);"
 					  cornerRadius="5" enabled="{myrep.currentItem.enabled}"
 					  icon="{myrep.currentItem.imgSmall}" iconPlacement="bottom"
