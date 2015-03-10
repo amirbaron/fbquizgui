@@ -33,7 +33,7 @@
 				}
 				else
 				{
-					model.loaderInfo=this.root.loaderInfo;
+					model.loaderInfo=this.parent.root.loaderInfo;
 					DataModel.getInstance().loadConfigFromUrl();	
 				}
 				CursorManager.removeBusyCursor();
