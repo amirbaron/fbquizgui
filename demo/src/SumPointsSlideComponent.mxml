@@ -2,7 +2,7 @@
 <s:NavigatorContent xmlns:fx="http://ns.adobe.com/mxml/2009"
 					xmlns:s="library://ns.adobe.com/flex/spark"
 					xmlns:mx="library://ns.adobe.com/flex/mx"
-					width="485" height="337" label="View 1" hideEffect="fade" showEffect="fade">
+					width="468" height="337" label="View 1" hideEffect="fade" showEffect="fade">
 	
 	
 	<fx:Script>
@@ -18,7 +18,7 @@
 		]]>
 	</fx:Script>
 
-	<s:Image x="7" y="75" width="471" height="353"
+	<s:Image x="0" y="0" width="468" height="353"
 			 source="{model.activity.summingImage}"/>
 	<mx:Box x="350" y="100" width="100" verticalAlign="middle" horizontalAlign="center" backgroundAlpha="0.85"  height="100" cornerRadius="100"  borderStyle="solid" borderColor="0xFFFFFF" backgroundColor="#2550CB" >
 	<s:Label    
@@ -27,7 +27,7 @@
 			 text="{model.activity.summingPrecantage}%"
 			 verticalAlign="middle"/>
 	</mx:Box>
-	<s:Label x="7" y="4" width="471" height="60" backgroundAlpha="0.76"
+	<s:Label x="0" y="0" width="468" height="60" backgroundAlpha="0.76"
 			 backgroundColor="#2550CB" color="#FBF7F7" fontFamily="Verdana" fontSize="16"
 			 fontStyle="italic" paddingLeft="15"
 			 text="{model.activity.summingText}"

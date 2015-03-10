@@ -18,25 +18,25 @@
    "slides":[  
             {  
                "text":"The land of Samba and football..",
-               "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_272,w_485/v1425733179/brasil_land_lzgqsu.jpg",
+               "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_263,w_468/v1425733179/brasil_land_lzgqsu.jpg",
                "entities":[  
                   {  
-					 "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503166/argentina_flag_r0joph.jpg",
+					 "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503166/argentina_flag_r0joph.jpg",
                      "title":"Argentina",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1424464773/Canada_flag_prmxdn.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1424464773/Canada_flag_prmxdn.jpg",
                      "title":"Canada",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1424464772/brasil_flag_wsc42k.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1424464772/brasil_flag_wsc42k.jpg",
                      "title":"Brazil",
                      "points":1
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1424464773/england_flag_ywfwkv.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1424464773/england_flag_ywfwkv.jpg",
                      "title":"England",
                      "points":0
                   }
@@ -44,25 +44,25 @@
             },
             {  
                "text":"Beatles, Big Ben and Fish & Chips..",
-               "imgSmall":"http://res.cloudinary.com/quiz/image/upload/v1425739010/england_land_dkj8wj.jpg",
+               "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_263,w_468/v1425739010/england_land_dkj8wj.jpg",
                "entities":[  
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1424464773/england_flag_ywfwkv.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1424464773/england_flag_ywfwkv.jpg",
                      "title":"England",
                      "points":1
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1424464773/Canada_flag_prmxdn.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1424464773/Canada_flag_prmxdn.jpg",
                      "title":"Canada",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503183/usa_flag_y1itur.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503183/usa_flag_y1itur.jpg",
                      "title":"USA",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503166/australia_flag_xxcwjf.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503166/australia_flag_xxcwjf.jpg",
                      "title":"Australia",
                      "points":0
                   }
@@ -70,25 +70,25 @@
             },
             {  
                "text":"Kangaroos, beaches, and Aussies..",
-               "imgSmall":"http://res.cloudinary.com/quiz/image/upload/v1425739206/australia_land_elvkos.jpg",
+               "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_263,w_468/v1425739206/australia_land_elvkos.jpg",
                "entities":[  
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503182/nz_flag_u0yt8l.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503182/nz_flag_u0yt8l.jpg",
                      "title":"New Zealand",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503182/nigeria_flag_kee32s.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503182/nigeria_flag_kee32s.jpg",
                      "title":"Nigeria",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503166/australia_flag_xxcwjf.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503166/australia_flag_xxcwjf.jpg",
                      "title":"Australia",
                      "points":1
                   },
                   {  
-                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/v1425503182/marocco_flag_dsttgj.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503182/marocco_flag_dsttgj.jpg",
                      "title":"Marocco",
                      "points":0
                   }
@@ -96,25 +96,25 @@
             },
 			{  
                "text":"Saint Basil's Cathedral, Putin, and Vodka..",
-               "imgSmall":"http://res.cloudinary.com/quiz/image/upload/v1425739571/russia_land_s3obpo.jpg",
+               "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_263,w_468/v1425739571/russia_land_s3obpo.jpg",
                "entities":[  
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503166/france_flag_krkxul.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503166/france_flag_krkxul.jpg",
                      "title":"France",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503457/russia_flag_n4mg1f.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503457/russia_flag_n4mg1f.jpg",
                      "title":"Russia",
                      "points":1
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503183/poland_flag_phtxam.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503183/poland_flag_phtxam.jpg",
                      "title":"Poland",
                      "points":0
                   },
                   {  
-                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/v1425503166/germany_flag_fvrofa.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503166/germany_flag_fvrofa.jpg",
                      "title":"Germany",
                      "points":0
                   }
@@ -122,25 +122,25 @@
             },
 			{  
                "text":"Karate, Manga, and Sake..",
-               "imgSmall":"http://res.cloudinary.com/quiz/image/upload/v1425740846/japan_land_kqbnps.jpg",
+               "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_263,w_468/v1425740846/japan_land_kqbnps.jpg",
                "entities":[  
                   {  
-                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/v1425504504/sk_flag_pge7ue.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425504504/sk_flag_pge7ue.jpg",
                      "title":"S. Korea",
                      "points":0
                   },
                   {  
-                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/v1425503166/china_flag_qelwbg.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503166/china_flag_qelwbg.jpg",
                      "title":"China",
                      "points":0
                   },
                   {  
-                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/v1425503167/india_flag_i3bchj.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503167/india_flag_i3bchj.jpg",
                      "title":"India",
                      "points":0
                   },
                   {  
-                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/v1425504708/japan_flag_u93zxe.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425504708/japan_flag_u93zxe.jpg",
                      "title":"Japan",
                      "points":1
                   }
@@ -149,25 +149,25 @@
             },
             {  
                "text":"Tango, Messi and Alfajores..",
-               "imgSmall":"http://res.cloudinary.com/quiz/image/upload/v1425752179/argentina_land_n5pdrm.jpg",
+               "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_263,w_468/v1425752179/argentina_land_n5pdrm.jpg",
                "entities":[  
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503166/argentina_flag_r0joph.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503166/argentina_flag_r0joph.jpg",
                      "title":"Argentina",
                      "points":1
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503457/russia_flag_n4mg1f.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503457/russia_flag_n4mg1f.jpg",
                      "title":"Russia",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1424464774/italy_flag_c9utiv.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1424464774/italy_flag_c9utiv.jpg",
                      "title":"Italy",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1424464772/brasil_flag_wsc42k.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1424464772/brasil_flag_wsc42k.jpg",
                      "title":"Brazil",
                      "points":0
                   }
@@ -175,25 +175,25 @@
             },
             {  
                "text":"Ice, ice, and ice..",
-               "imgSmall":"http://res.cloudinary.com/quiz/image/upload/v1425752391/greenland_land_erg2rz.jpg",
+               "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_263,w_468/v1425752391/greenland_land_erg2rz.jpg",
                "entities":[  
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503183/ireland_vlheum.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503183/ireland_vlheum.jpg",
                      "title":"Ireland",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503167/holland_flag_tduuxp.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503167/holland_flag_tduuxp.jpg",
                      "title":"Holland",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503183/poland_flag_phtxam.jpg",
+                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503183/poland_flag_phtxam.jpg",
                      "title":"Poland",
                      "points":0
                   },
                   {  
-					 "imgSmall":"https://res.cloudinary.com/quiz/image/upload/v1425503167/greenland_flag_qausro.jpg",
+					 "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503167/greenland_flag_qausro.jpg",
                      "title":"Greenland",
                      "points":1
                   }

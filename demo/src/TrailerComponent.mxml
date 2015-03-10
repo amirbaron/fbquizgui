@@ -2,7 +2,7 @@
 <s:SkinnableContainer xmlns:fx="http://ns.adobe.com/mxml/2009"
 					  xmlns:s="library://ns.adobe.com/flex/spark"
 					  xmlns:mx="library://ns.adobe.com/flex/mx"
-					  x="0" y="0" width="485" height="250">
+					  x="0" y="0" width="483" height="80">
 	
 	<fx:Declarations>
 		<!--<local:SlidesModel id="slides" xmlns:local="*" />-->
@@ -16,12 +16,12 @@
 	</fx:Script>
 
 
-	<s:Label color="#666666" x="7" y="3"  fontFamily="Verdana" fontSize="22" 
+	<s:Label color="#666666" x="7" y="10"  fontFamily="Verdana" fontSize="16" 
 			 text="How well do you know the world?"/>
 	<s:Image x="7" y="30" width="40" height="45" source="{model.activity.imgSmall}"/>
-	<s:Label color="#666666" x="52" y="30" width="146" height="16" fontFamily="Verdana" fontSize="14" 
+	<s:Label  x="52" y="32" width="146" height="16" fontFamily="Verdana" fontSize="12" 
 			 text="{model.activity.createdByFirstName} {model.activity.createdByLastName}" verticalAlign="middle"/>
-	<s:Button x="53" y="52" width="73" label="Follow" chromeColor="#2550CB" color="#FDFBFB"
+
+	<s:Button x="51" y="52" width="73" label="Follow" chromeColor="#2550CB" color="#FDFBFB"
 			  focusColor="#2550CB"/>
-	
 </s:SkinnableContainer>

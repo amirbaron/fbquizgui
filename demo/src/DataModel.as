@@ -9,8 +9,6 @@ package
 	
 	import mx.collections.ArrayCollection;
 	
-	[SWF(width='485',height='192',backgroundColor='#ffffff',frameRate='25')]
-	
 	[Bindable] 
 	public class DataModel
 	{

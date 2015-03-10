@@ -2,7 +2,7 @@
 	<s:NavigatorContent xmlns:fx="http://ns.adobe.com/mxml/2009"
 						xmlns:s="library://ns.adobe.com/flex/spark"
 						xmlns:mx="library://ns.adobe.com/flex/mx"
-						width="485" height="337" label="View 1" >
+						width="468" height="337" label="View 1" >
 		
 		<fx:Declarations>
 			<s:Fade id="fadeIn" duration="2000" target="{slideContainer}" 
@@ -89,23 +89,23 @@
 
 		<s:Group id="slideContainer">
 
-		<s:Image id="mainImage" x="0" y="0" width="485" height="272"
+		<s:Image id="mainImage" x="0" y="0" width="468" height="263"
 				 source="{model.activity.slides[model.activity.currentSlide].imgSmall}"/>
-		<s:Label x="0" y="235" width="485" height="31" backgroundAlpha="0.76"
-				 backgroundColor="#2550CB" color="#FBF7F7" fontFamily="Verdana" fontSize="16"
+		<s:Label x="0" y="225" width="468" height="31" backgroundAlpha="0.76"
+				 backgroundColor="#000000" color="#FBF7F7" fontFamily="Verdana" fontSize="16"
 				 fontStyle="italic" paddingLeft="15"
 				 text="{model.activity.slides[model.activity.currentSlide].text}"
 				 verticalAlign="middle"/>
 
 
 		
-	<mx:HBox id="allButtons" x="0" y="275" width="485">
+	<mx:HBox id="allButtons" x="0" y="270" width="468">
 		<mx:Repeater id="myrep"
 					 dataProvider="{model.activity.slides[model.activity.currentSlide].entities}">
 		
-			<s:Button label="{myrep.currentItem.title}" width="115"
+			<s:Button label="{myrep.currentItem.title}" width="111" height="82"
 					  chromeColor="{myrep.currentItem.chromeColor}" click="buttonClicked(event);"
-					  cornerRadius="5" enabled="{myrep.currentItem.enabled}"
+					   enabled="{myrep.currentItem.enabled}"
 					  icon="{myrep.currentItem.imgSmall}" iconPlacement="bottom"
 					  uid="{myrep.currentIndex}"/>
 	

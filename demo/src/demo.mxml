@@ -3,12 +3,12 @@
 
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
 			   xmlns:s="library://ns.adobe.com/flex/spark"
-			   xmlns:mx="library://ns.adobe.com/flex/mx" width="485" height="485" xmlns:local="*" preinitialize="preInit(event);">
+			   xmlns:mx="library://ns.adobe.com/flex/mx" width="470" height="460" xmlns:local="*" preinitialize="preInit(event);">
 
 	
 	<fx:Metadata>
 		[Event(name="jsonLoaded", type="flash.events.Event")]
-		[SWF(width='486', height='500')]
+		[SWF(width='470', height='460')]
 	</fx:Metadata>
 	
 		
@@ -62,13 +62,15 @@
 		]]>
 	</fx:Script>
 	<!--initialize="addSlides();"-->
-	<mx:ViewStack id="viewstack" name="viewstack" x="0" y="0" width="485" height="475" initialize="addSlides();">
+	<s:BorderContainer width="470" x="0" y="0" height="460" borderColor="#cccccc" >
+	<mx:ViewStack id="viewstack" name="viewstack" x="0" y="0" width="468" height="460" initialize="addSlides();">
 	</mx:ViewStack>
 	<local:SlidesChooserComponent/>
-	<s:BorderContainer width="485" x="0" y="405" height="80" borderColor="#cccccc" backgroundColor="#eceff6">
+	<s:BorderContainer width="468" x="0" y="380" height="80" borderColor="#cccccc" backgroundColor="#FFFFFF">
 
 		<local:TrailerComponent id="trailer"/>
 	</s:BorderContainer>
+		</s:BorderContainer >
 
 
 	
