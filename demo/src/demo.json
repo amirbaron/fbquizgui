@@ -21,23 +21,23 @@
                "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_263,w_468/v1425733179/brasil_land_lzgqsu.jpg",
                "entities":[  
                   {  
-					 "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503166/argentina_flag_r0joph.jpg",
-                     "title":"Argentina",
+					 "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_177,w_109/v1426197016/mexico_s7jwzc.jpg",
+                     "title":"Mexico",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1424464773/Canada_flag_prmxdn.jpg",
-                     "title":"Canada",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_172,w_109/v1426197014/colombia_nybdvi.jpg",
+                     "title":"Colombia",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1424464772/brasil_flag_wsc42k.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_177,w_109/v1426197014/brasil_lcyu76.jpg",
                      "title":"Brazil",
                      "points":1
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1424464773/england_flag_ywfwkv.jpg",
-                     "title":"England",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_174,w_109/v1426197015/costa_rica_ofpel6.jpg",
+                     "title":"Costa Rica",
                      "points":0
                   }
                ]
@@ -47,23 +47,23 @@
                "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_263,w_468/v1425739010/england_land_dkj8wj.jpg",
                "entities":[  
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1424464773/england_flag_ywfwkv.jpg",
-                     "title":"England",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_177,w_109/v1426197017/uk_drt1su.jpg",
+                     "title":"UK",
                      "points":1
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1424464773/Canada_flag_prmxdn.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_168,w_109/v1426197014/canada_c2hdyn.jpg",
                      "title":"Canada",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503183/usa_flag_y1itur.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_177,w_109/v1426197017/usa_rp15tm.jpg",
                      "title":"USA",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503166/australia_flag_xxcwjf.jpg",
-                     "title":"Australia",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_168,w_109/v1426197015/france_dg2g9c.jpg",
+                     "title":"France",
                      "points":0
                   }
                ]
@@ -73,23 +73,23 @@
                "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_263,w_468/v1425739206/australia_land_elvkos.jpg",
                "entities":[  
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503182/nz_flag_u0yt8l.jpg",
-                     "title":"New Zealand",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_177,w_109/v1426197016/india_vpycfc.jpg",
+                     "title":"India",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503182/nigeria_flag_kee32s.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,g_center,h_180,w_109/v1426197016/nigeria_flag_grlljz.jpg",
                      "title":"Nigeria",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503166/australia_flag_xxcwjf.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,g_west,h_159,w_109/v1426197014/australia_lxw6wl.jpg",
                      "title":"Australia",
                      "points":1
                   },
                   {  
-                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503182/marocco_flag_dsttgj.jpg",
-                     "title":"Marocco",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_183,w_109/v1426197017/safrica_e8tcdx.jpg",
+                     "title":"S. Africa",
                      "points":0
                   }
                ]
@@ -99,22 +99,22 @@
                "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_263,w_468/v1425739571/russia_land_s3obpo.jpg",
                "entities":[  
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503166/france_flag_krkxul.jpg",
-                     "title":"France",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_174,w_109/v1426198491/bulgaria_uxassf.jpg",
+                     "title":"Bulgaria",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503457/russia_flag_n4mg1f.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_177,w_109/v1426197016/russia_upjrok.jpg",
                      "title":"Russia",
                      "points":1
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503183/poland_flag_phtxam.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_168,w_109/v1426197016/poland_kewtl4.jpg",
                      "title":"Poland",
                      "points":0
                   },
                   {  
-                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503166/germany_flag_fvrofa.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_177,w_102/v1426197015/germany_xzr080.jpg",
                      "title":"Germany",
                      "points":0
                   }
@@ -125,22 +125,22 @@
                "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_263,w_468/v1425740846/japan_land_kqbnps.jpg",
                "entities":[  
                   {  
-                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425504504/sk_flag_pge7ue.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_183,w_109/v1426197016/skorea_y3wcze.jpg",
                      "title":"S. Korea",
                      "points":0
                   },
                   {  
-                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503166/china_flag_qelwbg.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_177,w_109/v1426197014/china_ops046.jpg",
                      "title":"China",
                      "points":0
                   },
                   {  
-                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503167/india_flag_i3bchj.jpg",
-                     "title":"India",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_177,w_109/v1426197016/nkorea_km6bx1.jpg",
+                     "title":"N. Korea",
                      "points":0
                   },
                   {  
-                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425504708/japan_flag_u93zxe.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_168,w_109/v1426197015/japan_gsdv0c.jpg",
                      "title":"Japan",
                      "points":1
                   }
@@ -152,23 +152,23 @@
                "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_263,w_468/v1425752179/argentina_land_n5pdrm.jpg",
                "entities":[  
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503166/argentina_flag_r0joph.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,g_center,h_177,w_109/v1426197014/argentina_sdznqb.jpg",
                      "title":"Argentina",
                      "points":1
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503457/russia_flag_n4mg1f.jpg",
-                     "title":"Russia",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,g_center,h_159,w_109/v1426197015/ecuador_wpzgl1.jpg",
+                     "title":"Ecuador",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1424464774/italy_flag_c9utiv.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,g_center,h_177,w_109/v1426199286/italy_eybvr8.jpg",
                      "title":"Italy",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1424464772/brasil_flag_wsc42k.jpg",
-                     "title":"Brazil",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_177,w_109/v1426199432/spain_hwpsic.jpg",
+                     "title":"Spain",
                      "points":0
                   }
                ]
@@ -178,22 +178,22 @@
                "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_263,w_468/v1425752391/greenland_land_erg2rz.jpg",
                "entities":[  
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503183/ireland_vlheum.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,g_center,h_159,w_109/v1426197015/ireland_b8vcuy.jpg",
                      "title":"Ireland",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503167/holland_flag_tduuxp.jpg",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_168,w_109/v1426197015/holland_ose3xm.jpg",
                      "title":"Holland",
                      "points":0
                   },
                   {  
-                     "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503183/poland_flag_phtxam.jpg",
-                     "title":"Poland",
+                     "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_168,w_109/v1426197015/images_wak461.jpg",
+                     "title":"Iceland",
                      "points":0
                   },
                   {  
-					 "imgSmall":"https://res.cloudinary.com/quiz/image/upload/c_scale,h_80,w_109/v1425503167/greenland_flag_qausro.jpg",
+					 "imgSmall":"http://res.cloudinary.com/quiz/image/upload/c_scale,h_80/c_crop,h_177,w_109/v1426197015/greenland_brxrgw.jpg",
                      "title":"Greenland",
                      "points":1
                   }
